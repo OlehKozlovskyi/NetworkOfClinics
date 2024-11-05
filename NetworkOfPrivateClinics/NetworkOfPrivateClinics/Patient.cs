@@ -15,6 +15,7 @@ namespace NetworkOfPrivateClinics
         public string Name {  get; private set; }
         public string Surname {  get; private set; }
         private string email;
+
         public string Email 
         {
             get => email;
@@ -27,16 +28,17 @@ namespace NetworkOfPrivateClinics
                 
             }
         }
-        private string phoneNumber;
-        public string PhoneNumber 
+
+        private string contactNumber;
+        public string ContactNumber 
         { 
-            get => phoneNumber; 
+            get => contactNumber; 
             private set
             {
                 string template = @"(?=.*\+[0-9]{3}\s?[0-9]{2}\s?[0-9]{3}\s?[0-9]{4,5}$)";
-                if (!Regex.IsMatch(phoneNumber, template))
+                if (!Regex.IsMatch(contactNumber, template))
                     throw new InvalidDataException("Input string isn`t ukrainian phone number");
-                phoneNumber = value;
+                contactNumber = value;
             } 
         }
 
@@ -46,8 +48,12 @@ namespace NetworkOfPrivateClinics
             Name = name;
             Surname = surname;
             Email = email;
-            PhoneNumber = phoneNumber;
+            ContactNumber = phoneNumber;
         }
+
+        public void ChangePhoneNumber(string phoneNumber) => ContactNumber = phoneNumber;
+
+        public void ChangeEmailAddress(string email) => Email = email;
 
     }
 }
