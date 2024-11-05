@@ -8,7 +8,7 @@ namespace NetworkOfPrivateClinics
 {
     public class Doctor
     {
-        public static int ID { get; private set; }
+        public static int DoctorID { get; private set; }
         public string Name { get; private set; }
         public string Surname { get; private set; }
         public double CostOfPermissiom {  get; private set; }

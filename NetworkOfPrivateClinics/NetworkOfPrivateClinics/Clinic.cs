@@ -8,14 +8,14 @@ namespace NetworkOfPrivateClinics
 {
     public class Clinic
     {
-        public static int ID { get; private set; }
+        public static int ClinicID { get; private set; }
         public string Name { get; private set; }
         public string Location {  get; private set; }
         public List<Doctor> Doctors { get; private set; }
 
         public Clinic(string name, string location, List<Doctor> doctors)
         {
-            ID += 1;
+            ClinicID += 1;
             Name = name;
             Location = location;
             Doctors = doctors;
