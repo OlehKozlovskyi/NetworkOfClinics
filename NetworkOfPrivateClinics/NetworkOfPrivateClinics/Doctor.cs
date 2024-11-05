@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics
 {
-    internal class Doctor
+    public class Doctor
     {
+        public static int ID { get; private set; }
+        public string Name { get; private set; }
+        public string Surname { get; private set; }
+        public double CostOfPermissiom {  get; private set; }
+        public Dictionary<TimeSpan, Patient> ListOfAppointments { get; set; }
     }
 }
