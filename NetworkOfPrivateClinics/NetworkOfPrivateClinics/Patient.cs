@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using NetworkOfPrivateClinics.Exceptions;
 
 namespace NetworkOfPrivateClinics
 {
@@ -23,7 +24,7 @@ namespace NetworkOfPrivateClinics
             {
                 string template = @"^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$";
                 if (!Regex.IsMatch(email, template))
-                    throw new InvalidDataException("Input string isn`t email address");
+                    throw new InvalidPatientEmailException(value);
                 email = value;
                 
             }
@@ -37,7 +38,7 @@ namespace NetworkOfPrivateClinics
             {
                 string template = @"(?=.*\+[0-9]{3}\s?[0-9]{2}\s?[0-9]{3}\s?[0-9]{4,5}$)";
                 if (!Regex.IsMatch(contactNumber, template))
-                    throw new InvalidDataException("Input string isn`t ukrainian phone number");
+                    throw new InvalidPatientPhoneNumberException(value);
                 contactNumber = value;
             } 
         }
@@ -54,6 +55,5 @@ namespace NetworkOfPrivateClinics
         public void ChangePhoneNumber(string phoneNumber) => ContactNumber = phoneNumber;
 
         public void ChangeEmailAddress(string email) => Email = email;
-
     }
 }
