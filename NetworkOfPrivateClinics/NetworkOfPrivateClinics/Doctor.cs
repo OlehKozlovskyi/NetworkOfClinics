@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetworkOfPrivateClinics.CustomExceptions;
+using NetworkOfPrivateClinics.Exceptions;
 
 namespace NetworkOfPrivateClinics
 {
@@ -23,7 +25,7 @@ namespace NetworkOfPrivateClinics
         public string Name { get; private set; }
         public string Surname { get; private set; }
         public DoctorType Type { get; private set; }
-        public double CostOfPermissiom {  get; private set; }
+        public double CostOfAdmission { get; private set; }
         public Dictionary<TimeOnly, Patient> ListOfAppointments { get; set; }
 
         public Doctor(string name, string surname, DoctorType type, double costOfPermissiom)
@@ -31,8 +33,15 @@ namespace NetworkOfPrivateClinics
             Name = name;
             Surname = surname;
             Type = type;
-            CostOfPermissiom = costOfPermissiom;
+            CostOfAdmission = costOfPermissiom;
             ListOfAppointments = InitListOfAppointments();
+        }
+        
+        public void MakeAppointment(TimeOnly hour, Patient patient)
+        {
+            if (!ListOfAppointments.ContainsKey(hour))
+                throw new InvalidHourToMakeAppointment(hour.ToString());
+            ListOfAppointments[hour] = patient;
         }
 
         private Dictionary<TimeOnly, Patient> InitListOfAppointments()
@@ -44,7 +53,7 @@ namespace NetworkOfPrivateClinics
             while (selectedTime < EndWorkingDay)
             {
                 tempListOfAppointments.Add(selectedTime, null);
-                selectedTime = selectedTime.AddMinutes(30);
+                selectedTime = selectedTime.AddHours(1);
             }
             return tempListOfAppointments;
         }

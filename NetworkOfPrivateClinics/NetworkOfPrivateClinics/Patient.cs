@@ -36,9 +36,8 @@ namespace NetworkOfPrivateClinics
             } 
         }
 
-        public Patient(int id, string name, string surname, string email, string phoneNumber)
+        public Patient(string name, string surname, string email, string phoneNumber)
         {
-            PatientID = id;
             Name = name;
             Surname = surname;
             Email = email;
