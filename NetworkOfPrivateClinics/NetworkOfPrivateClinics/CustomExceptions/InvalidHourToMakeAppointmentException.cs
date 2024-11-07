@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.CustomExceptions
 {
-    public class InvalidHourToMakeAppointment:Exception
+    public class InvalidHourToMakeAppointmentException:Exception
     {
-        public InvalidHourToMakeAppointment() { }
+        public InvalidHourToMakeAppointmentException() { }
 
-        public InvalidHourToMakeAppointment(string hour) 
+        public InvalidHourToMakeAppointmentException(string hour) 
             : base(String.Format($"Invalid hour to make appintment: {hour}")) { }
     }
 }

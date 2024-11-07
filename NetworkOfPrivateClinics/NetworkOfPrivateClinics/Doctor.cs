@@ -40,7 +40,7 @@ namespace NetworkOfPrivateClinics
         public void MakeAppointment(TimeOnly hour, Patient patient)
         {
             if (!ListOfAppointments.ContainsKey(hour))
-                throw new InvalidHourToMakeAppointment(hour.ToString());
+                throw new InvalidHourToMakeAppointmentException(hour.ToString());
             ListOfAppointments[hour] = patient;
         }
 

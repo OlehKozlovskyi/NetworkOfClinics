@@ -8,9 +8,9 @@ namespace NetworkOfPrivateClinics
 {
     public static class GenerateData
     {
-        public static List<Clinic> Clinics { get; set; }
-        public static List<List<Doctor>> Doctors { get; set; }
-        public static List<Patient> Patients { get; set; }
+        public static List<Clinic> Clinics { get; private set; }
+        public static List<List<Doctor>> Doctors { get; private set; }
+        public static List<Patient> Patients { get; private set; }
 
         static GenerateData()
         {
@@ -19,6 +19,11 @@ namespace NetworkOfPrivateClinics
             InitPatientList();
         }
 
+        public static void AddClinic(Clinic clinic) => Clinics.Add(clinic);
+
+        public static void AddPatient(Patient patient) => Patients.Add(patient);
+
+        #region Hardcoding data for lists
         private static void InitClinicsList()
         {
             Clinics = new List<Clinic>() 
@@ -26,92 +31,93 @@ namespace NetworkOfPrivateClinics
                 new Clinic(
                     name:"Central Family Clinic",
                     location:"123 Main Street, Anytown, CA 12345",
-                    Doctors[0]),
+                    doctors:Doctors[0]),
                 new Clinic(
                     name: "Oak Ridge Medical Center",
                     location:"456 Oak Ridge Avenue, Oak Ridge, TN 67890",
-                    Doctors[1]),
+                    doctors:Doctors[1]),
                 new Clinic(
                     name: "Pine Valley Wellness Center",
                     location: "789 Pine Valley Road, Pine Valley, AZ 54321",
-                    Doctors[2]),
+                    doctors:Doctors[2]),
             };
         }
 
         private static void InitDoctorsList() 
         {
-            Doctors.Add(new List<Doctor>()
-            {
-                new Doctor(
-                    name: "Alice",
-                    surname: "Johnson",
-                    type: DoctorType.Neurologist,
-                    costOfPermissiom: 100),
-                new Doctor(
-                    name: "Bob",
-                    surname: "Smith",
-                    type:DoctorType.Gastroenterologist,
-                    costOfPermissiom: 150),
-                new Doctor(
-                    name: "Charlie",
-                    surname: "Brown",
-                    type:DoctorType.Cardiology,
-                    costOfPermissiom: 120),
-                new Doctor(
-                    name: "David",
-                    surname: "Lee",
-                    type:DoctorType.Anasthesiologist,
-                    costOfPermissiom: 180)
+            Doctors =
+            [
+                new List<Doctor>()
+                {
+                    new Doctor(
+                        name: "Alice",
+                        surname: "Johnson",
+                        type: DoctorType.Neurologist,
+                        costOfPermissiom: 100),
+                    new Doctor(
+                        name: "Bob",
+                        surname: "Smith",
+                        type:DoctorType.Gastroenterologist,
+                        costOfPermissiom: 150),
+                    new Doctor(
+                        name: "Charlie",
+                        surname: "Brown",
+                        type:DoctorType.Cardiology,
+                        costOfPermissiom: 120),
+                    new Doctor(
+                        name: "David",
+                        surname: "Lee",
+                        type:DoctorType.Anasthesiologist,
+                        costOfPermissiom: 180)
 
-            });
-
-            Doctors.Add(new List<Doctor>()
-            {
-                new Doctor(
-                    name: "Emily",
-                    surname: "Davis",
-                    type:DoctorType.Neurologist,
-                    costOfPermissiom: 90),
-                new Doctor(
-                    name: "Frank",
-                    surname: "Miller",
-                    type:DoctorType.Anasthesiologist,
-                    costOfPermissiom: 110),
-                new Doctor(
-                    name: "Grace",
-                    surname: "Wilson",
-                    type:DoctorType.Dermatologist,
-                    costOfPermissiom: 160),
-                new Doctor(
-                    name: "Henry",
-                    surname: "Moore",
-                    type:DoctorType.Gastroenterologist,
-                    costOfPermissiom: 130)
-            });
-
-            Doctors.Add(new List<Doctor>()
-            {
-                new Doctor(
-                    name: "Isabella",
-                    surname: "Taylor",
-                    type:DoctorType.Cardiology,
-                    costOfPermissiom: 140),
-                new Doctor(
-                    name: "Jack",
-                    surname: "Anderson",
-                    type:DoctorType.Oncologist,
-                    costOfPermissiom: 170),
-                new Doctor(
-                    name: "Kate",
-                    surname: "Thomas",
-                    type:DoctorType.Anasthesiologist,
-                    costOfPermissiom: 105),
-                new Doctor(
-                    name: "Mia",
-                    surname: "Martin",
-                    type:DoctorType.Dermatologist,
-                    costOfPermissiom: 150)
-            });
+                },
+                new List<Doctor>()
+                {
+                    new Doctor(
+                        name: "Emily",
+                        surname: "Davis",
+                        type:DoctorType.Neurologist,
+                        costOfPermissiom: 90),
+                    new Doctor(
+                        name: "Frank",
+                        surname: "Miller",
+                        type:DoctorType.Anasthesiologist,
+                        costOfPermissiom: 110),
+                    new Doctor(
+                        name: "Grace",
+                        surname: "Wilson",
+                        type:DoctorType.Dermatologist,
+                        costOfPermissiom: 160),
+                    new Doctor(
+                        name: "Henry",
+                        surname: "Moore",
+                        type:DoctorType.Gastroenterologist,
+                        costOfPermissiom: 130)
+                },
+                new List<Doctor>()
+                {
+                    new Doctor(
+                        name: "Isabella",
+                        surname: "Taylor",
+                        type:DoctorType.Cardiology,
+                        costOfPermissiom: 140),
+                    new Doctor(
+                        name: "Jack",
+                        surname: "Anderson",
+                        type:DoctorType.Oncologist,
+                        costOfPermissiom: 170),
+                    new Doctor(
+                        name: "Kate",
+                        surname: "Thomas",
+                        type:DoctorType.Anasthesiologist,
+                        costOfPermissiom: 105),
+                    new Doctor(
+                        name: "Mia",
+                        surname: "Martin",
+                        type:DoctorType.Dermatologist,
+                        costOfPermissiom: 150)
+                },
+            ];
         }
 
         private static void InitPatientList()
@@ -165,14 +171,7 @@ namespace NetworkOfPrivateClinics
                     phoneNumber:"+380 99 876 5432"),
             };
         }
+        #endregion
 
-        /// Implement it
-        //private static void InitListOfAppointmentsDifferentDoctors()
-        //{
-        //    foreach(var patient in Patients.Where())
-        //    {
-
-        //    }
-        //}
     }
 }
