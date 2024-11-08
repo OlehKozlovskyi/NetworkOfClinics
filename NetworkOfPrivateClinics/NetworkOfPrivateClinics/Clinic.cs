@@ -2,15 +2,15 @@
 {
     public class Clinic
     {
-        public Clinic(string name, string location, List<Doctor> doctors)
+        public Clinic(int id, string name, string location, List<Doctor> doctors)
         {
-            ClinicID += 1;
+            ClinicID = id;
             Name = name;
             Location = location;
             Doctors = doctors;
         }
 
-        public static int ClinicID { get; private set; }
+        public int ClinicID { get; private set; }
         public string Name { get; private set; }
         public string Location { get; private set; }
         public List<Doctor> Doctors { get; private set; }

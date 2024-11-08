@@ -5,15 +5,16 @@ namespace NetworkOfPrivateClinics
 {
     public class Patient
     {
-        public Patient(string name, string surname, string email, string phoneNumber)
+        public Patient(int id, string name, string surname, string email, string phoneNumber)
         {
+            PatientID = id;
             Name = name;
             Surname = surname;
             Email = email;
             ContactNumber = phoneNumber;
         }
 
-        public static int PatientID { get; private set; }
+        public int PatientID { get; private set; }
         public string Name { get; private set; }
         public string Surname { get; private set; }
         private string _email;
