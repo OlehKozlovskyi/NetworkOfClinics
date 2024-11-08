@@ -8,16 +8,16 @@ namespace NetworkOfPrivateClinics
 {
     public static class GenerateData
     {
-        public static List<Clinic> Clinics { get; private set; }
-        public static List<List<Doctor>> Doctors { get; private set; }
-        public static List<Patient> Patients { get; private set; }
-
         static GenerateData()
         {
             InitDoctorsList();
             InitClinicsList();
             InitPatientList();
         }
+
+        public static List<Clinic> Clinics { get; private set; }
+        public static List<List<Doctor>> Doctors { get; private set; }
+        public static List<Patient> Patients { get; private set; }
 
         public static void AddClinic(Clinic clinic) => Clinics.Add(clinic);
 

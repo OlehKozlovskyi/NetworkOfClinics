@@ -21,13 +21,6 @@ namespace NetworkOfPrivateClinics
 
     public class Doctor
     {
-        public static int DoctorID { get; private set; }
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
-        public DoctorType Type { get; private set; }
-        public double CostOfAdmission { get; private set; }
-        public Dictionary<TimeOnly, Patient> ListOfAppointments { get; set; }
-
         public Doctor(string name, string surname, DoctorType type, double costOfPermissiom)
         {
             Name = name;
@@ -36,7 +29,15 @@ namespace NetworkOfPrivateClinics
             CostOfAdmission = costOfPermissiom;
             ListOfAppointments = InitListOfAppointments();
         }
-        
+
+        public static int DoctorID { get; private set; }
+        public string Name { get; private set; }
+        public string Surname { get; private set; }
+        public DoctorType Type { get; private set; }
+        public double CostOfAdmission { get; private set; }
+        public Dictionary<TimeOnly, Patient> ListOfAppointments { get; set; }
+
+
         public void MakeAppointment(TimeOnly hour, Patient patient)
         {
             if (!ListOfAppointments.ContainsKey(hour))
