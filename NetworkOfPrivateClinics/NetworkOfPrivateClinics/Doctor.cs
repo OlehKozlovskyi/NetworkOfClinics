@@ -21,7 +21,7 @@ namespace NetworkOfPrivateClinics
 
     public class Doctor
     {
-        public Doctor(int id, string name, string surname, DoctorType type, double costOfPermissiom)
+        public Doctor(int id, string name, string surname, DoctorType type, decimal costOfPermissiom)
         {
             DoctorID = id;
             Name = name;
@@ -35,7 +35,7 @@ namespace NetworkOfPrivateClinics
         public string Name { get; private set; }
         public string Surname { get; private set; }
         public DoctorType Type { get; private set; }
-        public double CostOfAdmission { get; private set; }
+        public decimal CostOfAdmission { get; private set; }
         public Dictionary<TimeOnly, Patient> ListOfAppointments { get; set; }
 
 

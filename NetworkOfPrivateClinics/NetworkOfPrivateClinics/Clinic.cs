@@ -13,8 +13,6 @@
         public int ClinicID { get; private set; }
         public string Name { get; private set; }
         public string Location { get; private set; }
-        public List<Doctor> Doctors { get; private set; }
-
-        public void AddDoctor(Doctor doctor) => Doctors.Add(doctor);
+        public IReadOnlyList<Doctor> Doctors { get; private set; }
     }
 }

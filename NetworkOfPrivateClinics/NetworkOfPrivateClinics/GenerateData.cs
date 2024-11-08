@@ -57,25 +57,25 @@ namespace NetworkOfPrivateClinics
                         name: "Alice",
                         surname: "Johnson",
                         type: DoctorType.Neurologist,
-                        costOfPermissiom: 100),
+                        costOfPermissiom: 100m),
                     new Doctor(
                         id: 1345,
                         name: "Bob",
                         surname: "Smith",
                         type:DoctorType.Gastroenterologist,
-                        costOfPermissiom: 150),
+                        costOfPermissiom: 150m),
                     new Doctor(
                         id: 1245,
                         name: "Charlie",
                         surname: "Brown",
                         type:DoctorType.Cardiology,
-                        costOfPermissiom: 120),
+                        costOfPermissiom: 120m),
                     new Doctor(
                         id: 1235,
                         name: "David",
                         surname: "Lee",
                         type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 180)
+                        costOfPermissiom: 180m)
 
                 },
                 new List<Doctor>()
@@ -85,25 +85,25 @@ namespace NetworkOfPrivateClinics
                         name: "Emily",
                         surname: "Davis",
                         type:DoctorType.Neurologist,
-                        costOfPermissiom: 90),
+                        costOfPermissiom: 90m),
                     new Doctor(
                         id: 2234,
                         name: "Frank",
                         surname: "Miller",
                         type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 110),
+                        costOfPermissiom: 110m),
                     new Doctor(
                         id: 2334,
                         name: "Grace",
                         surname: "Wilson",
                         type:DoctorType.Dermatologist,
-                        costOfPermissiom: 160),
+                        costOfPermissiom: 160m),
                     new Doctor(
                         id: 2445,
                         name: "Henry",
                         surname: "Moore",
                         type:DoctorType.Gastroenterologist,
-                        costOfPermissiom: 130)
+                        costOfPermissiom: 130m)
                 },
                 new List<Doctor>()
                 {
@@ -112,25 +112,25 @@ namespace NetworkOfPrivateClinics
                         name: "Isabella",
                         surname: "Taylor",
                         type:DoctorType.Cardiology,
-                        costOfPermissiom: 140),
+                        costOfPermissiom: 140m),
                     new Doctor(
                         id: 3223,
                         name: "Jack",
                         surname: "Anderson",
                         type:DoctorType.Oncologist,
-                        costOfPermissiom: 170),
+                        costOfPermissiom: 170m),
                     new Doctor(
                         id: 3344,
                         name: "Kate",
                         surname: "Thomas",
                         type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 105),
+                        costOfPermissiom: 105m),
                     new Doctor(
                         id: 3356,
                         name: "Mia",
                         surname: "Martin",
                         type:DoctorType.Dermatologist,
-                        costOfPermissiom: 150)
+                        costOfPermissiom: 150m)
                 },
             ];
         }

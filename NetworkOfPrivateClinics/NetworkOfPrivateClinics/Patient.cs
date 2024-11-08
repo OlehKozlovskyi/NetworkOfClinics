@@ -44,9 +44,5 @@ namespace NetworkOfPrivateClinics
                 _contactNumber = value;
             }
         }
-
-        public void ChangePhoneNumber(string phoneNumber) => ContactNumber = phoneNumber;
-
-        public void ChangeEmailAddress(string email) => Email = email;
     }
 }
