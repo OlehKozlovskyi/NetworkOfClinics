@@ -34,5 +34,11 @@ namespace NetworkOfPrivateClinics
             }
             return generatedList;
         }
+
+        public Patient this[TimeOnly time]
+        {
+            get => ListOfDailyAppointments[time];
+            set => ListOfDailyAppointments[time] = value;
+        }
     }
 }

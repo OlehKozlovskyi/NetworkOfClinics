@@ -9,6 +9,6 @@ namespace NetworkOfPrivateClinics.CustomExceptions
     public class InvalidHourToMakeAppointmentException:Exception
     {
         public InvalidHourToMakeAppointmentException(string hour) 
-            : base(String.Format($"Invalid hour to make appintment: {hour}")) { }
+            : base(String.Format($"Invalid hour to make appointment: {hour}")) { }
     }
 }

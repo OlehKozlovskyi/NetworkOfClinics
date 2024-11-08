@@ -28,7 +28,7 @@ namespace NetworkOfPrivateClinics
             Surname = surname;
             Type = type;
             CostOfAdmission = costOfPermissiom;
-            ListOfAppointments = InitListOfAppointments();
+            Appointments = new AppointmentFactory("8:00", "17:00");
         }
 
         public int DoctorID { get; private set; }
@@ -36,28 +36,26 @@ namespace NetworkOfPrivateClinics
         public string Surname { get; private set; }
         public DoctorType Type { get; private set; }
         public decimal CostOfAdmission { get; private set; }
-        public Dictionary<TimeOnly, Patient> ListOfAppointments { get; set; }
+        public AppointmentFactory Appointments { get; set; }
 
 
-        public void MakeAppointment(TimeOnly hour, Patient patient)
+        public void MakeAppointment(int daysNumber, TimeOnly hour, Patient patient)
         {
-            if (!ListOfAppointments.ContainsKey(hour))
-                throw new InvalidHourToMakeAppointmentException(hour.ToString());
-            ListOfAppointments[hour] = patient;
+            if (IsDaysNumberAndHourValid(daysNumber,hour))
+                Appointments[daysNumber][hour] = patient;
         }
 
-        private Dictionary<TimeOnly, Patient> InitListOfAppointments()
+        private bool IsDaysNumberAndHourValid(int daysNumber, TimeOnly hour)
         {
-            const int startWorkingDayAtHour = 8;
-            TimeOnly EndWorkingDay = TimeOnly.MinValue.AddHours(17);
-            TimeOnly selectedTime = TimeOnly.MinValue.AddHours(startWorkingDayAtHour);
-            Dictionary<TimeOnly, Patient> tempListOfAppointments = new();
-            while (selectedTime < EndWorkingDay)
-            {
-                tempListOfAppointments.Add(selectedTime, null);
-                selectedTime = selectedTime.AddHours(1);
-            }
-            return tempListOfAppointments;
+            int currentYear = DateTime.Now.Year;
+            int currentMonth = DateTime.Now.Month;
+            if ((daysNumber > DateTime.DaysInMonth(currentYear, currentMonth)) || (daysNumber < 0))
+                throw new InvalidDaysNumberToMakeAppointmentException(nameof(daysNumber));
+            TimeOnly startWorkingDay = Appointments[daysNumber].ListOfDailyAppointments.First().Key;
+            TimeOnly endWorkingDay = Appointments[daysNumber].ListOfDailyAppointments.Last().Key;
+            if (!hour.IsBetween(startWorkingDay, endWorkingDay))
+                throw new InvalidHourToMakeAppointmentException(nameof(hour));
+            return true;
         }
     }
 }

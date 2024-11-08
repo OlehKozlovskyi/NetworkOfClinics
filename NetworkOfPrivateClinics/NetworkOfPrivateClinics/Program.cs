@@ -2,8 +2,8 @@
 
 using NetworkOfPrivateClinics;
 
-DailyRoutine routine = new DailyRoutine("8:00","17:00");
-Console.WriteLine(routine);
+var appointment = new AppointmentFactory("8:00", "17:00");
+Console.WriteLine();
 //WriteLineAvailableClinics();
 //WriteLineClinicsSpecizalizations();
 //WriteLineAllDoctorsOfEachClinic();
