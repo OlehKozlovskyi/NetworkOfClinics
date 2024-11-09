@@ -6,25 +6,21 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics
 {
-    public static class GenerateData
+    public class Data
     {
-        static GenerateData()
+        public Data()
         {
             InitDoctorsList();
             InitClinicsList();
             InitPatientList();
         }
 
-        public static List<Clinic> Clinics { get; private set; }
-        public static List<List<Doctor>> Doctors { get; private set; }
-        public static List<Patient> Patients { get; private set; }
-
-        public static void AddClinic(Clinic clinic) => Clinics.Add(clinic);
-
-        public static void AddPatient(Patient patient) => Patients.Add(patient);
+        public List<Clinic> Clinics { get; set; }
+        private List<List<Doctor>> Doctors { get; set; }
+        private List<Patient> Patients { get; set; }
 
         #region Hardcoding data for lists
-        private static void InitClinicsList()
+        private void InitClinicsList()
         {
             Clinics = new List<Clinic>() 
             {
@@ -46,7 +42,7 @@ namespace NetworkOfPrivateClinics
             };
         }
 
-        private static void InitDoctorsList() 
+        private void InitDoctorsList() 
         {
             Doctors =
             [
@@ -135,7 +131,7 @@ namespace NetworkOfPrivateClinics
             ];
         }
 
-        private static void InitPatientList()
+        private void InitPatientList()
         {
             Patients = new List<Patient>() 
             {
