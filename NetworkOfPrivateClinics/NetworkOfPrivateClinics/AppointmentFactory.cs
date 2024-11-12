@@ -9,24 +9,24 @@ namespace NetworkOfPrivateClinics
 {
     public class AppointmentFactory
     {
-        public readonly int AmountDaysInCurrentMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+        public int AmountDaysInCurrentMonth { get;}
+        public string StartWorkingDay { get; }
+        public string EndWorkingDay { get; }
 
         public AppointmentFactory(string startWorkingDay, string endWorkingDay)
         {
-            Appointment = new Dictionary<int, DailyRoutine>();
+            StartWorkingDay = startWorkingDay;
+            EndWorkingDay = endWorkingDay;
+            AmountDaysInCurrentMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+        }
+        
+        public Dictionary<int, DailyRoutine> GetAppointment()
+        {
+            var appointment = new Dictionary<int, DailyRoutine>();
             int currentNumberOfDay = DateTime.Now.Day;
             for (int i = currentNumberOfDay; i <= AmountDaysInCurrentMonth; i++)
-                Appointment.Add(i, new DailyRoutine(startWorkingDay, endWorkingDay));
-        }
-
-        public Dictionary<int, DailyRoutine> Appointment { get; set; }
-
-        public DailyRoutine this[int daysNumber]
-        {
-            get
-            {
-                return Appointment[daysNumber];
-            }
+                appointment.Add(i, new DailyRoutine(StartWorkingDay, EndWorkingDay));
+            return appointment;
         }
     }
 }
