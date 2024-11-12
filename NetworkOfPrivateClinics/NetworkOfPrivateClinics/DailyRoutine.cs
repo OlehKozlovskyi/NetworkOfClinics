@@ -9,7 +9,8 @@ namespace NetworkOfPrivateClinics
 {
     public class DailyRoutine
     {
-        public Dictionary<TimeOnly, Patient> ListOfDailyAppointments { get; set; }
+        public readonly TimeOnly StartWorkingDay;
+        public readonly TimeOnly EndWorkingDay;
 
         public DailyRoutine(string startWorkingDay, string endWorkingDay)
         {
@@ -18,8 +19,13 @@ namespace NetworkOfPrivateClinics
             ListOfDailyAppointments = GenerateDailyRoutine(StartWorkingDay, EndWorkingDay);
         }
 
-        public readonly TimeOnly StartWorkingDay;
-        public readonly TimeOnly EndWorkingDay;
+        public Dictionary<TimeOnly, Patient> ListOfDailyAppointments { get; set; }
+
+        public Patient this[TimeOnly time]
+        {
+            get => ListOfDailyAppointments[time];
+            set => ListOfDailyAppointments[time] = value;
+        }
 
         private TimeOnly ConvertToTimeOnly(string time) => TimeOnly.Parse(time, new CultureInfo("uk-UA"));
 
@@ -33,12 +39,6 @@ namespace NetworkOfPrivateClinics
                 currentTime = currentTime.AddHours(1);
             }
             return generatedList;
-        }
-
-        public Patient this[TimeOnly time]
-        {
-            get => ListOfDailyAppointments[time];
-            set => ListOfDailyAppointments[time] = value;
         }
     }
 }
