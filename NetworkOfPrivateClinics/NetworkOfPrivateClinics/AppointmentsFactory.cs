@@ -10,14 +10,11 @@ namespace NetworkOfPrivateClinics
 {
     public class AppointmentsFactory
     {
-        public readonly AppointmentsValidator appointmentValidator;
-
-        public AppointmentsFactory(string startWorkingDay, string endWorkingDay, AppointmentsValidator validator)
+        public AppointmentsFactory(string startWorkingDay, string endWorkingDay)
         {
             StartWorkingDay = ConvertToTimeOnly(startWorkingDay);
             EndWorkingDay = ConvertToTimeOnly(endWorkingDay);
             AmountDaysInCurrentMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
-            appointmentValidator = validator;
         }
 
         public int AmountDaysInCurrentMonth { get; }
@@ -33,17 +30,7 @@ namespace NetworkOfPrivateClinics
                 appointment.Add(i, new DailyRoutine(StartWorkingDay, EndWorkingDay));
             return appointment;
         }
-        /*
-        public Dictionary<int, DailyRoutine> ModifyAppointment(Dictionary<int, DailyRoutine> appointmentsList, int daysNumber, TimeOnly hour, Patient patient)
-        {
-            if (!appointmentValidator.IsNumberValid(daysNumber))
-                throw new InvalidDaysNumberToMakeAppointmentException(nameof(daysNumber));
-            if(!appointmentValidator.IsHourValid(hour))
-                throw new InvalidHourToMakeAppointmentException(nameof(daysNumber));
-            appointmentsList[daysNumber][hour] = patient;
-            return appointmentsList;
-        }
-        */
+
         private TimeOnly ConvertToTimeOnly(string time) => TimeOnly.Parse(time, new CultureInfo("uk-UA"));
     }
 }

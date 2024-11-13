@@ -52,100 +52,38 @@ namespace NetworkOfPrivateClinics
             [
                 new List<Doctor>()
                 {
-                    new Doctor(
-                        id: 1234,
-                        name: "Alice",
-                        surname: "Johnson",
-                        type: DoctorType.Neurologist,
-                        costOfPermissiom: 100m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 1345,
-                        name: "Bob",
-                        surname: "Smith",
-                        type:DoctorType.Gastroenterologist,
-                        costOfPermissiom: 150m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 1245,
-                        name: "Charlie",
-                        surname: "Brown",
-                        type:DoctorType.Cardiology,
-                        costOfPermissiom: 120m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 1235,
-                        name: "David",
-                        surname: "Lee",
-                        type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 180m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment())
-
+                    new DoctorsFactory(1234, "Alice", "Johnson", DoctorType.Neurologist, 100m, 
+                        new AppointmentsFactory("8:00", "17:00")).GetDoctor(),
+                    new DoctorsFactory(1345, "Bob", "Smith", DoctorType.Gastroenterologist, 150m,
+                        new AppointmentsFactory("8:00", "17:00")).GetDoctor(),
+                    new DoctorsFactory(1245, "Charlie", "Brown", DoctorType.Cardiology, 120m,
+                        new AppointmentsFactory("8:00", "17:00")).GetDoctor(),
+                    new DoctorsFactory(1235, "David", "Lee", DoctorType.Anasthesiologist, 180m,
+                        new AppointmentsFactory("8:00", "17:00")).GetDoctor()
                 },
                 new List<Doctor>()
                 {
-                    new Doctor(
-                        id: 2134,
-                        name: "Emily",
-                        surname: "Davis",
-                        type:DoctorType.Neurologist,
-                        costOfPermissiom: 90m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 2234,
-                        name: "Frank",
-                        surname: "Miller",
-                        type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 110m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 2334,
-                        name: "Grace",
-                        surname: "Wilson",
-                        type:DoctorType.Dermatologist,
-                        costOfPermissiom: 160m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 2445,
-                        name: "Henry",
-                        surname: "Moore",
-                        type:DoctorType.Gastroenterologist,
-                        costOfPermissiom: 130m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment())
+                    new DoctorsFactory(2134, "Emily", "Davis", DoctorType.Neurologist, 90m,
+                        new AppointmentsFactory("9:00", "18:00")).GetDoctor(),
+                    new DoctorsFactory(2234, "Frank", "Miller", DoctorType.Anasthesiologist, 110m,
+                        new AppointmentsFactory("9:00", "18:00")).GetDoctor(),
+                    new DoctorsFactory(2334, "Grace", "Wilson", DoctorType.Dermatologist, 160m,
+                        new AppointmentsFactory("9:00", "18:00")).GetDoctor(),
+                    new DoctorsFactory(2445, "Henry", "Moore", DoctorType.Gastroenterologist, 130m,
+                        new AppointmentsFactory("9:00", "18:00")).GetDoctor(),
                 },
                 new List<Doctor>()
                 {
-                    new Doctor(
-                        id:3123,
-                        name: "Isabella",
-                        surname: "Taylor",
-                        type:DoctorType.Cardiology,
-                        costOfPermissiom: 140m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 3223,
-                        name: "Jack",
-                        surname: "Anderson",
-                        type:DoctorType.Oncologist,
-                        costOfPermissiom: 170m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 3344,
-                        name: "Kate",
-                        surname: "Thomas",
-                        type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 105m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
-                    new Doctor(
-                        id: 3356,
-                        name: "Mia",
-                        surname: "Martin",
-                        type:DoctorType.Dermatologist,
-                        costOfPermissiom: 150m,
-                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment())
+                    new DoctorsFactory(3123, "Isabella", "Taylor", DoctorType.Cardiology, 140m,
+                        new AppointmentsFactory("12:00", "20:00")).GetDoctor(),
+                    new DoctorsFactory(3223, "Jack", "Anderson", DoctorType.Oncologist, 170m,
+                        new AppointmentsFactory("12:00", "20:00")).GetDoctor(),
+                    new DoctorsFactory(3344, "Kate", "Thomas", DoctorType.Anasthesiologist, 105m,
+                        new AppointmentsFactory("12:00", "20:00")).GetDoctor(),
+                    new DoctorsFactory(3356, "Mia", "Martin", DoctorType.Dermatologist, 150m,
+                        new AppointmentsFactory("12:00", "20:00")).GetDoctor(),
                 },
             ];
-            var temp = JsonConvert.SerializeObject(Doctors);
         }
 
         private void InitPatientList()
