@@ -42,8 +42,9 @@ namespace NetworkOfPrivateClinics
             };
         }
 
-        private void InitDoctorsList() 
+        private void InitDoctorsList(List<AppointmentsFactory> appointments) 
         {
+            var validator = new AppointmentsValidator("8:00")
             Doctors =
             [
                 new List<Doctor>()
@@ -53,25 +54,29 @@ namespace NetworkOfPrivateClinics
                         name: "Alice",
                         surname: "Johnson",
                         type: DoctorType.Neurologist,
-                        costOfPermissiom: 100m),
+                        costOfPermissiom: 100m,
+                        appointment: new AppointmentsFactory("8:00", "17:00")),
                     new Doctor(
                         id: 1345,
                         name: "Bob",
                         surname: "Smith",
                         type:DoctorType.Gastroenterologist,
-                        costOfPermissiom: 150m),
+                        costOfPermissiom: 150m,
+                        appointment: appointments[1]),
                     new Doctor(
                         id: 1245,
                         name: "Charlie",
                         surname: "Brown",
                         type:DoctorType.Cardiology,
-                        costOfPermissiom: 120m),
+                        costOfPermissiom: 120m,
+                        appointment: appointments[2]),
                     new Doctor(
                         id: 1235,
                         name: "David",
                         surname: "Lee",
                         type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 180m)
+                        costOfPermissiom: 180m,
+                        appointment: appointments[3])
 
                 },
                 new List<Doctor>()
@@ -81,25 +86,29 @@ namespace NetworkOfPrivateClinics
                         name: "Emily",
                         surname: "Davis",
                         type:DoctorType.Neurologist,
-                        costOfPermissiom: 90m),
+                        costOfPermissiom: 90m,
+                        appointment: appointments[4]),
                     new Doctor(
                         id: 2234,
                         name: "Frank",
                         surname: "Miller",
                         type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 110m),
+                        costOfPermissiom: 110m,
+                        appointment: appointments[5]),
                     new Doctor(
                         id: 2334,
                         name: "Grace",
                         surname: "Wilson",
                         type:DoctorType.Dermatologist,
-                        costOfPermissiom: 160m),
+                        costOfPermissiom: 160m,
+                        appointment: appointments[6]),
                     new Doctor(
                         id: 2445,
                         name: "Henry",
                         surname: "Moore",
                         type:DoctorType.Gastroenterologist,
-                        costOfPermissiom: 130m)
+                        costOfPermissiom: 130m,
+                        appointment: appointments[7])
                 },
                 new List<Doctor>()
                 {
@@ -108,25 +117,29 @@ namespace NetworkOfPrivateClinics
                         name: "Isabella",
                         surname: "Taylor",
                         type:DoctorType.Cardiology,
-                        costOfPermissiom: 140m),
+                        costOfPermissiom: 140m,
+                        appointment: appointments[8]),
                     new Doctor(
                         id: 3223,
                         name: "Jack",
                         surname: "Anderson",
                         type:DoctorType.Oncologist,
-                        costOfPermissiom: 170m),
+                        costOfPermissiom: 170m,
+                        appointment: appointments[9]),
                     new Doctor(
                         id: 3344,
                         name: "Kate",
                         surname: "Thomas",
                         type:DoctorType.Anasthesiologist,
-                        costOfPermissiom: 105m),
+                        costOfPermissiom: 105m,
+                        appointment: appointments[10]),
                     new Doctor(
                         id: 3356,
                         name: "Mia",
                         surname: "Martin",
                         type:DoctorType.Dermatologist,
-                        costOfPermissiom: 150m)
+                        costOfPermissiom: 150m,
+                        appointment: appointments[11])
                 },
             ];
         }

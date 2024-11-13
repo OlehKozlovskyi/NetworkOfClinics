@@ -12,10 +12,10 @@ namespace NetworkOfPrivateClinics
         public readonly TimeOnly StartWorkingDay;
         public readonly TimeOnly EndWorkingDay;
 
-        public DailyRoutine(string startWorkingDay, string endWorkingDay)
+        public DailyRoutine(TimeOnly startWorkingDay, TimeOnly endWorkingDay)
         {
-            StartWorkingDay = ConvertToTimeOnly(startWorkingDay);
-            EndWorkingDay = ConvertToTimeOnly(endWorkingDay);
+            StartWorkingDay = startWorkingDay;
+            EndWorkingDay = endWorkingDay;
             ListOfDailyAppointments = GenerateDailyRoutine(StartWorkingDay, EndWorkingDay);
         }
 
@@ -26,8 +26,6 @@ namespace NetworkOfPrivateClinics
             get => ListOfDailyAppointments[time];
             set => ListOfDailyAppointments[time] = value;
         }
-
-        private TimeOnly ConvertToTimeOnly(string time) => TimeOnly.Parse(time, new CultureInfo("uk-UA"));
 
         private Dictionary<TimeOnly, Patient> GenerateDailyRoutine(TimeOnly startWorkingDay, TimeOnly endWorkingDay)
         {
