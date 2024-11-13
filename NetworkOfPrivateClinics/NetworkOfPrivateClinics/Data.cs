@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics
@@ -42,9 +45,9 @@ namespace NetworkOfPrivateClinics
             };
         }
 
-        private void InitDoctorsList(List<AppointmentsFactory> appointments) 
+        private void InitDoctorsList() 
         {
-            var validator = new AppointmentsValidator("8:00")
+            var validator = new AppointmentsValidator("8:00", "17:00");
             Doctors =
             [
                 new List<Doctor>()
@@ -55,28 +58,28 @@ namespace NetworkOfPrivateClinics
                         surname: "Johnson",
                         type: DoctorType.Neurologist,
                         costOfPermissiom: 100m,
-                        appointment: new AppointmentsFactory("8:00", "17:00")),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 1345,
                         name: "Bob",
                         surname: "Smith",
                         type:DoctorType.Gastroenterologist,
                         costOfPermissiom: 150m,
-                        appointment: appointments[1]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 1245,
                         name: "Charlie",
                         surname: "Brown",
                         type:DoctorType.Cardiology,
                         costOfPermissiom: 120m,
-                        appointment: appointments[2]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 1235,
                         name: "David",
                         surname: "Lee",
                         type:DoctorType.Anasthesiologist,
                         costOfPermissiom: 180m,
-                        appointment: appointments[3])
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment())
 
                 },
                 new List<Doctor>()
@@ -87,28 +90,28 @@ namespace NetworkOfPrivateClinics
                         surname: "Davis",
                         type:DoctorType.Neurologist,
                         costOfPermissiom: 90m,
-                        appointment: appointments[4]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 2234,
                         name: "Frank",
                         surname: "Miller",
                         type:DoctorType.Anasthesiologist,
                         costOfPermissiom: 110m,
-                        appointment: appointments[5]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 2334,
                         name: "Grace",
                         surname: "Wilson",
                         type:DoctorType.Dermatologist,
                         costOfPermissiom: 160m,
-                        appointment: appointments[6]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 2445,
                         name: "Henry",
                         surname: "Moore",
                         type:DoctorType.Gastroenterologist,
                         costOfPermissiom: 130m,
-                        appointment: appointments[7])
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment())
                 },
                 new List<Doctor>()
                 {
@@ -118,30 +121,31 @@ namespace NetworkOfPrivateClinics
                         surname: "Taylor",
                         type:DoctorType.Cardiology,
                         costOfPermissiom: 140m,
-                        appointment: appointments[8]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 3223,
                         name: "Jack",
                         surname: "Anderson",
                         type:DoctorType.Oncologist,
                         costOfPermissiom: 170m,
-                        appointment: appointments[9]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 3344,
                         name: "Kate",
                         surname: "Thomas",
                         type:DoctorType.Anasthesiologist,
                         costOfPermissiom: 105m,
-                        appointment: appointments[10]),
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment()),
                     new Doctor(
                         id: 3356,
                         name: "Mia",
                         surname: "Martin",
                         type:DoctorType.Dermatologist,
                         costOfPermissiom: 150m,
-                        appointment: appointments[11])
+                        appointment: new AppointmentsFactory("8:00", "17:00", validator).GetMonthlyAppointment())
                 },
             ];
+            var temp = JsonConvert.SerializeObject(Doctors);
         }
 
         private void InitPatientList()
