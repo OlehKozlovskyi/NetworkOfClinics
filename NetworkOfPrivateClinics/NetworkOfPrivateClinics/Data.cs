@@ -47,7 +47,6 @@ namespace NetworkOfPrivateClinics
 
         private void InitDoctorsList() 
         {
-            var validator = new AppointmentsValidator("8:00", "17:00");
             Doctors =
             [
                 new List<Doctor>()

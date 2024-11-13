@@ -12,8 +12,8 @@ namespace NetworkOfPrivateClinics
     {
         public AppointmentsFactory(string startWorkingDay, string endWorkingDay)
         {
-            StartWorkingDay = ConvertToTimeOnly(startWorkingDay);
-            EndWorkingDay = ConvertToTimeOnly(endWorkingDay);
+            StartWorkingDay = startWorkingDay.ToTimeOnly();
+            EndWorkingDay = endWorkingDay.ToTimeOnly();
             AmountDaysInCurrentMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
         }
 
@@ -30,7 +30,5 @@ namespace NetworkOfPrivateClinics
                 appointment.Add(i, new DailyRoutine(StartWorkingDay, EndWorkingDay));
             return appointment;
         }
-
-        private TimeOnly ConvertToTimeOnly(string time) => TimeOnly.Parse(time, new CultureInfo("uk-UA"));
     }
 }

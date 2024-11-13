@@ -1,4 +1,5 @@
-﻿using NetworkOfPrivateClinics.Interfaces;
+﻿using NetworkOfPrivateClinics.CustomExceptions;
+using NetworkOfPrivateClinics.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,14 @@ namespace NetworkOfPrivateClinics
     {
         public ClinicRepository(List<Clinic> clinicContext) 
         {
-            context = clinicContext;    
+            context = clinicContext;
         }
 
         private readonly List<Clinic> context;
 
         public void DeleteClinic(int id)
         {
-            Clinic clinic = context.First(x =>x.ClinicID==id);
+            Clinic clinic = context.First(x => x.ClinicID == id);
             context.Remove(clinic);
         }
 
