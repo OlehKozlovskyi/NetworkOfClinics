@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics
 {
+    // Violate solid open/closed principe, should be replaced by classes
+
     public enum SupportedFileFormats
     {
         json,
@@ -29,9 +31,9 @@ namespace NetworkOfPrivateClinics
 
         public FilePaths(string path, FilePathsValidator pathsValidator, SupportedFileFormats fileFormat)
         {
-            Path = path;
             _directoryValidator = pathsValidator;
             _fileFormat = fileFormat;
+            Path = path;
         }
 
         public string Path
