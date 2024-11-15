@@ -10,13 +10,13 @@ namespace NetworkOfPrivateClinics
 {
     public class AppointmentsValidator
     {
-        private TimeOnly startWorkingDay;
-        private TimeOnly endWorkingDay;
+        private TimeOnly _startWorkingDay;
+        private TimeOnly _endWorkingDay;
         
         public AppointmentsValidator(string startWorkingDay, string endWorkingDay) 
         {
-            this.startWorkingDay = startWorkingDay.ToTimeOnly();
-            this.endWorkingDay = endWorkingDay.ToTimeOnly();
+            this._startWorkingDay = startWorkingDay.ToTimeOnly();
+            this._endWorkingDay = endWorkingDay.ToTimeOnly();
         }
 
         public bool IsNumberValid(int daysNumber)
@@ -30,7 +30,7 @@ namespace NetworkOfPrivateClinics
 
         public bool IsHourValid(TimeOnly hour)
         {
-            if (!hour.IsBetween(startWorkingDay, endWorkingDay))
+            if (!hour.IsBetween(_startWorkingDay, _endWorkingDay))
                 throw new InvalidHourToMakeAppointmentException(nameof(hour));
             return true;
         }
