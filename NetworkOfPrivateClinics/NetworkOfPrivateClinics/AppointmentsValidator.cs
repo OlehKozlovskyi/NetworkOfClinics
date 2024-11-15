@@ -10,13 +10,13 @@ namespace NetworkOfPrivateClinics
 {
     public class AppointmentsValidator
     {
-        private TimeOnly _startWorkingDay;
-        private TimeOnly _endWorkingDay;
+        private readonly TimeOnly _startWorkingDay;
+        private readonly TimeOnly _endWorkingDay;
         
         public AppointmentsValidator(string startWorkingDay, string endWorkingDay) 
         {
-            this._startWorkingDay = startWorkingDay.ToTimeOnly();
-            this._endWorkingDay = endWorkingDay.ToTimeOnly();
+            _startWorkingDay = startWorkingDay.ToTimeOnly();
+            _endWorkingDay = endWorkingDay.ToTimeOnly();
         }
 
         public bool IsNumberValid(int daysNumber)
