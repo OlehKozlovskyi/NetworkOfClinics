@@ -10,23 +10,23 @@ namespace NetworkOfPrivateClinics
 {
     public class ClinicRepository : IClinicRepository
     {
+        private readonly List<Clinic> _context;
+
         public ClinicRepository(List<Clinic> clinicContext) 
         {
-            context = clinicContext;
+            _context = clinicContext;
         }
-
-        private readonly List<Clinic> context;
 
         public void DeleteClinic(int id)
         {
-            Clinic clinic = context.First(x => x.ClinicID == id);
-            context.Remove(clinic);
+            Clinic clinic = _context.First(x => x.ClinicID == id);
+            _context.Remove(clinic);
         }
 
-        public Clinic GetClinicById(int id) => context.First(x => x.ClinicID == id);
+        public Clinic GetClinicById(int id) => _context.First(x => x.ClinicID == id);
 
-        public IEnumerable<Clinic> GetClinics() => context;
+        public IEnumerable<Clinic> GetClinics() => _context;
 
-        public void InsertClinic(Clinic clinic) => context.Add(clinic);
+        public void InsertClinic(Clinic clinic) => _context.Add(clinic);
     }
 }

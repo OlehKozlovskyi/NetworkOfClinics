@@ -2,28 +2,67 @@
 
 using NetworkOfPrivateClinics;
 
-Data generatedData = new Data();
-ClinicRepository repository = new ClinicRepository(generatedData.Clinics);
-GetAllHospitalsWithDoctors();
-GetHospitalWithDoctorsById(14311554);
-
-void GetAllHospitalsWithDoctors()
+namespace NetworkOfPrivateClinics
 {
-    foreach (Clinic currentClinic in repository.GetClinics())
+    public static class Program
     {
-        Console.WriteLine($"Name: {currentClinic.Name}");
-        Console.WriteLine($"Location: {currentClinic.Location}");
-        foreach (Doctor currentDoctor in currentClinic.Doctors)
-            Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
-        Console.WriteLine();
-    }
-}
+        private static readonly Data generatedInformation;
+        private static readonly ClinicRepository clinicRepository;
 
-void GetHospitalWithDoctorsById(int id)
-{
-    Clinic currentClinic = repository.GetClinicById(id);
-    Console.WriteLine($"Name: {currentClinic.Name}");
-    Console.WriteLine($"Location: {currentClinic.Location}");
-    foreach(Doctor currentDoctor in currentClinic.Doctors)
-        Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
+        static Program() 
+        {
+            generatedInformation = new Data();
+            clinicRepository = new ClinicRepository(generatedInformation.Clinics);
+        }
+
+        public static void Main()
+        {
+            Console.WriteLine(">>>>>>>>>>>> MENU <<<<<<<<<<<<".PadLeft(30));
+            Console.WriteLine("1) Get all hospitals".PadLeft(20));
+            Console.WriteLine("2) Get hospital by id".PadLeft(20));
+            Console.WriteLine("Select option");
+            int optionsNumber = Convert.ToInt32(Console.ReadLine());
+            ManageOptions(optionsNumber);
+        }
+
+        public static void GetAllHospitalsWithDoctors()
+        {
+            foreach (Clinic currentClinic in clinicRepository.GetClinics())
+            {
+                Console.WriteLine($"Name: {currentClinic.Name}");
+                Console.WriteLine($"Location: {currentClinic.Location}");
+                foreach (Doctor currentDoctor in currentClinic.Doctors)
+                    Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
+                Console.WriteLine();
+            }
+        }
+
+        public static void GetHospitalWithDoctorsById()
+        {
+            Console.WriteLine("Enter clinics ID: ");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Clinic currentClinic = clinicRepository.GetClinicById(id);
+            Console.WriteLine($"Name: {currentClinic.Name}");
+            Console.WriteLine($"Location: {currentClinic.Location}");
+            foreach (Doctor currentDoctor in currentClinic.Doctors)
+                Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
+        }
+
+        private static void ManageOptions(int optionsNumber)
+        {
+            switch (optionsNumber)
+            {
+                case 1:
+                    GetAllHospitalsWithDoctors();
+                    break;
+                case 2:
+                    GetHospitalWithDoctorsById();
+                        break;
+                default:
+                    Console.WriteLine("Can`t find option with such number");
+                    break;
+
+            }
+        }
+    }
 }
