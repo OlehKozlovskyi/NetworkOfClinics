@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NetworkOfPrivateClinics.Program">
+    <Position X="9.5" Y="8" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAABAQAAACEAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.Patient">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAASAAAAAAAAAAAAQABAAAAAAQAAAAAAAAAAE=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.Extensions" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.DoctorsFactory">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAQAAAAABEAAAAAAAFAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>DoctorsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.Doctor">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAQARAAAAAAAEQAAAAAAAAA=</HashCode>
+      <FileName>Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.Data" Collapsed="true">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAABAAAAAAAACAAAAAhgAAAAAAAAA=</HashCode>
+      <FileName>Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.DailyRoutine">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAEAAACAACAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DailyRoutine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.ClinicRepository">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAEAABAAAAAABAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ClinicRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.Clinic">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAIAAAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Clinic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.AppointmentsValidator">
+    <Position X="6" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACAABABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppointmentsValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkOfPrivateClinics.AppointmentsFactory">
+    <Position X="5.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAQAAAAAAAAACAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>AppointmentsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="NetworkOfPrivateClinics.DoctorType">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAEAAAAIgwAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
