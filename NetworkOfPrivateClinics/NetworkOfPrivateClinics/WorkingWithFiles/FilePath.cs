@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkOfPrivateClinics
+namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     // Violate solid open/closed principe, should be replaced by classes
 
@@ -17,19 +17,19 @@ namespace NetworkOfPrivateClinics
         csv
     }
 
-    public class FilePaths
+    public class FilePath
     {
         private string _path;
         private readonly FilePathsValidator _directoryValidator;
         private readonly SupportedFileFormats _fileFormat;
 
-        public FilePaths(SupportedFileFormats fileFormat) 
+        public FilePath(SupportedFileFormats fileFormat)
         {
             Path = Directory.GetCurrentDirectory();
             _fileFormat = fileFormat;
         }
 
-        public FilePaths(string path, FilePathsValidator pathsValidator, SupportedFileFormats fileFormat)
+        public FilePath(string path, FilePathsValidator pathsValidator, SupportedFileFormats fileFormat)
         {
             _directoryValidator = pathsValidator;
             _fileFormat = fileFormat;

@@ -8,24 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkOfPrivateClinics
+namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public class CustomJsonWriter : IWriter
+    public class JsonFileWriter : IWriter
     {
         private string _fileName;
         private string _path;
         private readonly string _fullPath;
 
-        public CustomJsonWriter(string path, string fileName)
+        public JsonFileWriter(string path, string fileName)
         {
             Path = path;
             _fileName = fileName;
-            _fullPath = String.Join('\\', Path, _fileName);
+            _fullPath = string.Join('\\', Path, _fileName);
         }
 
         public string FileName
         {
-            get=>_fileName;
+            get => _fileName;
             private set
             {
                 if (value is null)
@@ -34,12 +34,12 @@ namespace NetworkOfPrivateClinics
             }
         }
 
-        public string Path 
+        public string Path
         {
             get => _path;
             private set
             {
-                if(value is null)
+                if (value is null)
                     throw new ArgumentNullException(nameof(value));
                 _path = value;
             }
@@ -50,13 +50,13 @@ namespace NetworkOfPrivateClinics
             throw new NotImplementedException();
         }
 
-        public void Write(params ClinicRepository[] clinicsList)
+        public void Write(ClinicRepository clinicsRepository)
         {
             JsonSerializer serializer = new JsonSerializer();
-            using(StreamWriter sw = new StreamWriter(_fullPath))
-            using(JsonWriter writer = new JsonTextWriter(sw))
+            using (StreamWriter sw = new StreamWriter(_fullPath))
+            using (JsonWriter writer = new JsonTextWriter(sw))
             {
-                serializer.Serialize(writer, clinicsList);
+                serializer.Serialize(writer, clinicsRepository.GetClinics());
             }
         }
     }

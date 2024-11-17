@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.WorkingWithFiles;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
@@ -20,9 +21,8 @@ namespace NetworkOfPrivateClinics
         public static void Main()
         {
             string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source""";
-            var paths = new FilePaths(path, new FilePathsValidator(), SupportedFileFormats.json);
-            var tem = new CustomJsonWriter(path, "MyFirstJson");
-            var t = JsonConvert.SerializeObject(clinicRepository);
+            var paths = new FilePath(path, new FilePathsValidator(), SupportedFileFormats.json);
+            var tem = new JsonFileWriter(path, "MyFirstJson");
             tem.Write(clinicRepository);
             //CreateMenu();
         }

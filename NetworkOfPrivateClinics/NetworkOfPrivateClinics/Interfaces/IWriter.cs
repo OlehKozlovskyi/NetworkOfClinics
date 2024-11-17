@@ -10,7 +10,7 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IWriter
     {
-        public void Write(params ClinicRepository[] clinicsList);
+        public void Write(ClinicRepository clinicsList);
         public void Update();
     }
 }
