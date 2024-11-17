@@ -1,18 +1,20 @@
 ﻿using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
 using Newtonsoft.Json;
+using CsvHelper;
+using System.Globalization;
+using System.IO;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public class JsonFileWriter : IFileWriter
+    public class CsvFileWriter : IFileWriter
     {
-        public JsonFileWriter(FullPathCreator fullPathCreator)
+        public CsvFileWriter(FullPathCreator fullPathCreator)
         {
             FullPath = fullPathCreator.GetFullPath();
         }
@@ -21,11 +23,10 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public void Write(ClinicRepository clinicsList)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            using (StreamWriter sw = new StreamWriter(FullPath))
-            using (JsonWriter writer = new JsonTextWriter(sw))
+            using (var sw = new StreamWriter(FullPath))
+            using (var writer = new CsvWriter(sw, CultureInfo.InvariantCulture))
             {
-                serializer.Serialize(writer, clinicsList.GetClinics());
+                writer.WriteRecords(clinicsList.GetClinics());
             }
         }
     }

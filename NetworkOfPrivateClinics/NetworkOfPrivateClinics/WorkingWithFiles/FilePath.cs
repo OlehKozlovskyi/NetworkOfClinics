@@ -1,4 +1,5 @@
 ﻿using NetworkOfPrivateClinics.CustomExceptions;
+using NetworkOfPrivateClinics.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,30 +10,22 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    // Violate solid open/closed principe, should be replaced by classes
-
-    public enum SupportedFileFormats
-    {
-        json,
-        csv
-    }
-
     public class FilePath
     {
         private string _path;
         private readonly FilePathsValidator _directoryValidator;
-        private readonly SupportedFileFormats _fileFormat;
+        private readonly IExtension _fileExtension;
 
-        public FilePath(SupportedFileFormats fileFormat)
+        public FilePath(IExtension filesExtension)
         {
             Path = Directory.GetCurrentDirectory();
-            _fileFormat = fileFormat;
+            _fileExtension = filesExtension;
         }
 
-        public FilePath(string path, FilePathsValidator pathsValidator, SupportedFileFormats fileFormat)
+        public FilePath(string path, FilePathsValidator pathsValidator, IExtension filesExtension)
         {
             _directoryValidator = pathsValidator;
-            _fileFormat = fileFormat;
+            _fileExtension = filesExtension;
             Path = path;
         }
 
@@ -49,7 +42,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public string[] GetPaths()
         {
-            string[] paths = Directory.GetFiles(Path, Enum.GetName(_fileFormat));
+            string[] paths = Directory.GetFiles(Path, _fileExtension.Extension);
             if (paths.Length == 0)
                 throw new NotFoundPathsToSupportedFilesException(paths);
             return paths;

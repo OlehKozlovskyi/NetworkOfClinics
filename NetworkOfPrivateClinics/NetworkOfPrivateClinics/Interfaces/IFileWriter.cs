@@ -8,9 +8,8 @@ using NetworkOfPrivateClinics.BisinessLogic;
 
 namespace NetworkOfPrivateClinics.Interfaces
 {
-    public interface IWriter
+    public interface IFileWriter
     {
         public void Write(ClinicRepository clinicsList);
-        public void Update();
     }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public struct JsonFileFormat : IFormat
+    public struct JsonFormat : Interfaces.IExtension
     {
         public string Extension { get; }
 
-        public JsonFileFormat(string extension)
+        public JsonFormat(string extension)
         {
             Extension = extension;
         }

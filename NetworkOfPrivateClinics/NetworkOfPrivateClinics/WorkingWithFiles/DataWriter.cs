@@ -10,20 +10,9 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class DataWriter
     {
-        private IWriter _writer;
-        private FilePath _filePath;
-        private string _fileName;
-
-        public DataWriter(IWriter writer, FilePath path, string fileName)//ADD format 
+        public void Write(ClinicRepository clinicRepository, IFileWriter writer)
         {
-            _writer = writer;
-            _filePath = path;
-            _fileName = fileName;
-        }
-
-        public void Write(ClinicRepository clinicRepository)
-        {
-
+            writer.Write(clinicRepository);
         }
     }
 }

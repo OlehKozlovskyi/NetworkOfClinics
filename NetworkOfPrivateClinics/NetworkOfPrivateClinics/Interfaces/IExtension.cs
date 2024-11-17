@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.Interfaces
 {
-    public interface IFormat
+    public interface IExtension
     {
         public string Extension { get; }
     }
