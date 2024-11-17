@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
@@ -21,8 +22,10 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public string FullPath { get; }
 
+        //Implement handmade Clinic Parser to CVS;
         public void Write(ClinicRepository clinicsList)
         {
+            string str = "1";
             using (var sw = new StreamWriter(FullPath))
             using (var writer = new CsvWriter(sw, CultureInfo.InvariantCulture))
             {

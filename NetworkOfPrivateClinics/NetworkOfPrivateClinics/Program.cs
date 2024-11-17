@@ -22,8 +22,10 @@ namespace NetworkOfPrivateClinics
         {
             string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source""";
             var writer = new DataWriter();
-            var creator = new FullPathCreator(path, "Second", new JsonFormat());
-            writer.Write(clinicRepository, new JsonFileWriter(creator));
+            var jsonPathCreator = new FullPathCreator(path, "ThirdAttemptJson1", new JsonFormat());
+            var csvPathCreator = new FullPathCreator(path, "ThirdAttemptCSV1", new CsvFormat());
+            writer.Write(clinicRepository, new JsonFileWriter(jsonPathCreator));
+            writer.Write(clinicRepository, new CsvFileWriter(csvPathCreator));
             //var paths = new FilePath(path, new FilePathsValidator(), new JsonFormat());
             //CreateMenu();
         }
