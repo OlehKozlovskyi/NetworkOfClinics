@@ -1,4 +1,5 @@
-﻿using NetworkOfPrivateClinics.Interfaces;
+﻿using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

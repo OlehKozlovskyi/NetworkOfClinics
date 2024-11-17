@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using NetworkOfPrivateClinics.CustomExceptions;
 using NetworkOfPrivateClinics.Exceptions;
 
-namespace NetworkOfPrivateClinics
+namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public enum DoctorType
     {

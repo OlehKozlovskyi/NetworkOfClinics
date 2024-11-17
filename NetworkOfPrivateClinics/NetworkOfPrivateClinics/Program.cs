@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using NetworkOfPrivateClinics;
+using NetworkOfPrivateClinics.BisinessLogic;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 

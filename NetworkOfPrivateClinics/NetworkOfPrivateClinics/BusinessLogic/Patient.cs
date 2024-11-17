@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using NetworkOfPrivateClinics.Exceptions;
 
-namespace NetworkOfPrivateClinics
+namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class Patient
     {

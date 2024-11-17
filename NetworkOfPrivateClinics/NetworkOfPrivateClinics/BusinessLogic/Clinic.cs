@@ -1,4 +1,4 @@
-﻿namespace NetworkOfPrivateClinics
+﻿namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class Clinic
     {
