@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public struct CsvFormat : Interfaces.IExtension
+    public struct CsvFormat : IExtension
     {
         public string Extension { get; }
 

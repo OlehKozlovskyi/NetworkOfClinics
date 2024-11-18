@@ -55,16 +55,22 @@ namespace NetworkOfPrivateClinics
             Console.WriteLine("1) CSV ");
             Console.WriteLine("2) JSON");
             int choice = int.Parse(Console.ReadLine());
-            IExtension extension = choice == 1 ? new CsvFormat(): new JsonFormat();
-            var PathCreator = new FullPathCreator(path, name, extension);
-            IFileWriter writer = choice == 1 ? new CsvFileWriter(PathCreator) : new JsonFileWriter(PathCreator);
-            return writer;
+            return TransformUserData(path, name, choice);
         }
 
         public static void WriteDataToFile(IFileWriter fileWriter)
         {
             DataWriter writer = new();
-            writer.Write(clinicRepository, fileWriter);
+            try
+            {
+                writer.Write(clinicRepository, fileWriter);
+                Console.WriteLine("Data was success written in file");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("File didn`t be created, uknown error");
+            }
+            
         }
 
         public static void GetAllHospitalsWithDoctors()
@@ -111,6 +117,14 @@ namespace NetworkOfPrivateClinics
                     break;
 
             }
+        }
+
+        private static IFileWriter TransformUserData(string path, string name, int choice)
+        {
+            IExtension extension = choice == 1 ? new CsvFormat() : new JsonFormat();
+            var PathCreator = new FullPathCreator(path, name, extension);
+            IFileWriter writer = choice == 1 ? new CsvFileWriter(PathCreator) : new JsonFileWriter(PathCreator);
+            return writer;
         }
     }
 }
