@@ -1,4 +1,8 @@
-﻿namespace NetworkOfPrivateClinics.BisinessLogic
+﻿
+using CsvHelper.Configuration.Attributes;
+using CsvHelper.TypeConversion;
+
+namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class Clinic
     {

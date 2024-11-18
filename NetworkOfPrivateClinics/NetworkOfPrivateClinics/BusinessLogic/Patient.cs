@@ -1,10 +1,14 @@
 ﻿using System.Text.RegularExpressions;
+using CsvHelper.Configuration.Attributes;
 using NetworkOfPrivateClinics.Exceptions;
 
 namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class Patient
     {
+        private string _email;
+        private string _contactNumber;
+
         public Patient(int id, string name, string surname, string email, string phoneNumber)
         {
             PatientID = id;
@@ -17,8 +21,6 @@ namespace NetworkOfPrivateClinics.BisinessLogic
         public int PatientID { get; private set; }
         public string Name { get; private set; }
         public string Surname { get; private set; }
-        private string _email;
-
         public string Email
         {
             get => _email;
@@ -32,7 +34,6 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             }
         }
 
-        private string _contactNumber;
         public string ContactNumber
         {
             get => _contactNumber;

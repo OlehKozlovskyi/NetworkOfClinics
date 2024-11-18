@@ -13,7 +13,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
     public class FilePath
     {
         private string _path;
-        private readonly FilePathsValidator _directoryValidator;
+        private readonly FilePathValidator _directoryValidator;
         private readonly IExtension _fileExtension;
 
         public FilePath(IExtension filesExtension)
@@ -22,7 +22,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             _fileExtension = filesExtension;
         }
 
-        public FilePath(string path, FilePathsValidator pathsValidator, IExtension filesExtension)
+        public FilePath(string path, FilePathValidator pathsValidator, IExtension filesExtension)
         {
             _directoryValidator = pathsValidator;
             _fileExtension = filesExtension;

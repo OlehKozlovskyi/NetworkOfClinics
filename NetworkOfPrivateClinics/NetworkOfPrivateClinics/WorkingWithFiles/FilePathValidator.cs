@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public class FilePathsValidator
+    public class FilePathValidator
     {
         public bool ValidateDirectory(string path) => Directory.Exists(path);
     }

@@ -1,8 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using CsvHelper;
 using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.Interfaces;
 using NetworkOfPrivateClinics.WorkingWithFiles;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 using System.Text.Json.Serialization;
 
 namespace NetworkOfPrivateClinics
@@ -21,23 +24,47 @@ namespace NetworkOfPrivateClinics
         public static void Main()
         {
             string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source""";
-            var writer = new DataWriter();
-            var jsonPathCreator = new FullPathCreator(path, "ThirdAttemptJson1", new JsonFormat());
-            var csvPathCreator = new FullPathCreator(path, "ThirdAttemptCSV1", new CsvFormat());
-            writer.Write(clinicRepository, new JsonFileWriter(jsonPathCreator));
-            writer.Write(clinicRepository, new CsvFileWriter(csvPathCreator));
-            //var paths = new FilePath(path, new FilePathsValidator(), new JsonFormat());
-            //CreateMenu();
+            CreateMenu();
+        }
+
+        public static void CreateStartupMenu()
+        {
+            Console.WriteLine("<<<<<<<<<<<<<<<<< STARTUP MENU >>>>>>>>>>>>>>>");
+            Console.WriteLine("2) Enter directory to source file: ");
         }
 
         public static void CreateMenu()
         {
-            Console.WriteLine(">>>>>>>>>>>> MENU <<<<<<<<<<<<".PadLeft(30));
-            Console.WriteLine("1) Get all hospitals".PadLeft(20));
-            Console.WriteLine("2) Get hospital by id".PadLeft(20));
+            Console.WriteLine(">>>>>>>>>>>> MENU <<<<<<<<<<<<");
+            Console.WriteLine("1) Get all hospitals");
+            Console.WriteLine("2) Get hospital by id");
+            Console.WriteLine("3) Write data to file");
             Console.WriteLine("Select option");
             int optionsNumber = Convert.ToInt32(Console.ReadLine());
             ManageOptions(optionsNumber);
+        }
+
+        public static IFileWriter GetInformationFromUser()
+        {
+            Console.Clear();
+            Console.WriteLine("Set directory for saving file: ");
+            string path = Console.ReadLine();
+            Console.WriteLine("Set file name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Choose one of the available formats: ");
+            Console.WriteLine("1) CSV ");
+            Console.WriteLine("2) JSON");
+            int choice = int.Parse(Console.ReadLine());
+            IExtension extension = choice == 1 ? new CsvFormat(): new JsonFormat();
+            var PathCreator = new FullPathCreator(path, name, extension);
+            IFileWriter writer = choice == 1 ? new CsvFileWriter(PathCreator) : new JsonFileWriter(PathCreator);
+            return writer;
+        }
+
+        public static void WriteDataToFile(IFileWriter fileWriter)
+        {
+            DataWriter writer = new();
+            writer.Write(clinicRepository, fileWriter);
         }
 
         public static void GetAllHospitalsWithDoctors()
@@ -73,6 +100,12 @@ namespace NetworkOfPrivateClinics
                 case 2:
                     GetHospitalWithDoctorsById();
                         break;
+                case 3:
+                    {
+                        var usersValues = GetInformationFromUser();
+                        WriteDataToFile(usersValues);
+                    }
+                    break;
                 default:
                     Console.WriteLine("Can`t find option with such number");
                     break;
