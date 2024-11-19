@@ -19,14 +19,12 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public string FullPath { get; }
 
-        public void Write(ClinicRepository clinicsList)
+        public void Write(List<Clinic> clinicsList)
         {
             JsonSerializer serializer = new JsonSerializer();
             using (StreamWriter sw = new StreamWriter(FullPath))
             using (JsonWriter writer = new JsonTextWriter(sw))
-            {
-                serializer.Serialize(writer, clinicsList.GetClinics());
-            }
+                serializer.Serialize(writer, clinicsList);
         }
     }
 }

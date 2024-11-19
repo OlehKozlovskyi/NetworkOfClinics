@@ -11,23 +11,24 @@ using System.Text.Json.Serialization;
 
 namespace NetworkOfPrivateClinics
 {
-    public static class Program
+    public class Program
     {
-        private static readonly Data generatedInformation;
-        private static readonly ClinicRepository clinicRepository;
-        private static readonly List<Clinic> clinics;
-        
-        static Program() 
+        private static Data generatedInformation;
+        private static ClinicRepository clinicRepository;
+        private static List<Clinic> clinics;
+        //private static string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\Oleh.json""";
+
+        public Program() 
         {
             generatedInformation = new Data();
-            clinics = new List<Clinic>();
             clinicRepository = new ClinicRepository(generatedInformation.Clinics);
+            clinics = new();
         }
 
         public static void Main()
         {
-            string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\Oleh.json""";
-            var test = new JsonFileReader().Read(path);
+            CreateStartupMenu();
+            Console.Clear();
             CreateMenu();
         }
 
@@ -36,6 +37,7 @@ namespace NetworkOfPrivateClinics
             Console.WriteLine("<<<<<<<<<<<<<<<<< STARTUP MENU >>>>>>>>>>>>>>>");
             Console.WriteLine("2) Enter directory to source file: ");
             string path = Console.ReadLine();
+            clinics = new FileReader().Read(path);
         }
 
         public static void CreateMenu()
@@ -68,7 +70,7 @@ namespace NetworkOfPrivateClinics
             DataWriter writer = new();
             try
             {
-                writer.Write(clinicRepository, fileWriter);
+                writer.Write(clinics, fileWriter);
                 Console.WriteLine("Data was success written in file");
             }
             catch(Exception ex)
@@ -80,7 +82,7 @@ namespace NetworkOfPrivateClinics
 
         public static void GetAllHospitalsWithDoctors()
         {
-            foreach (Clinic currentClinic in clinicRepository.GetClinics())
+            foreach (Clinic currentClinic in clinics)
             {
                 Console.WriteLine($"Name: {currentClinic.Name}");
                 Console.WriteLine($"Location: {currentClinic.Location}");
@@ -94,7 +96,7 @@ namespace NetworkOfPrivateClinics
         {
             Console.WriteLine("Enter clinics ID: ");
             int id = Convert.ToInt32(Console.ReadLine());
-            Clinic currentClinic = clinicRepository.GetClinicById(id);
+            Clinic currentClinic = clinics.Where(x=>x.ClinicID==id).First();
             Console.WriteLine($"Name: {currentClinic.Name}");
             Console.WriteLine($"Location: {currentClinic.Location}");
             foreach (Doctor currentDoctor in currentClinic.Doctors)

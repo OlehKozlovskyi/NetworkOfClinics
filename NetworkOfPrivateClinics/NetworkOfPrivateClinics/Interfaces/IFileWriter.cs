@@ -10,6 +10,6 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IFileWriter
     {
-        public void Write(ClinicRepository clinicsList);
+        public void Write(List<Clinic> clinicsList);
     }
 }

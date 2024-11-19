@@ -22,14 +22,11 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public string FullPath { get; }
 
-        public void Write(ClinicRepository clinicsList)
+        public void Write(List<Clinic> clinicsList)
         {
             using (var sw = new StreamWriter(FullPath))
             using (var writer = new CsvWriter(sw, CultureInfo.InvariantCulture))
-            {
-                var list = clinicsList.GetClinics();
-                writer.WriteRecords(list);
-            }
+                writer.WriteRecords(clinicsList);
         }
     }
 }
