@@ -23,7 +23,8 @@ namespace NetworkOfPrivateClinics
 
         public static void Main()
         {
-            string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source""";
+            string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\Oleh.json""";
+            var test = new JsonFileReader().Read(path);
             CreateMenu();
         }
 

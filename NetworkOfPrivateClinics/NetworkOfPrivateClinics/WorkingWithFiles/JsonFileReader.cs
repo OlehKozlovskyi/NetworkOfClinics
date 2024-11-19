@@ -12,34 +12,23 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileReader : IFileReader
     {
-        private FilePathValidator _validator;
-        private string _path;
-
-        public JsonFileReader(string path, FilePathValidator validator) 
-        {
-            _validator = validator;
-            Path = path;
-        }
-
-        public string Path
-        {
-            get => _path;
-            set
-            {
-                if (!_validator.ValidateDirectory(value))
-                    throw new InvalidDirectoryException(value);
-                _path = value;
-            }
-        } 
-
         public List<Clinic> Read(string path)
         {
             List<Clinic> items = new();
-            using (StreamReader r = new StreamReader("file.json"))
+            try
             {
-                string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<Clinic>>(json);
+                using (StreamReader r = new StreamReader(path))
+                {
+                    string json = r.ReadToEnd();
+                    items = JsonConvert.DeserializeObject<List<Clinic>>(json);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(ex.Message);
+            }
+            
             return items;
         }
     }
