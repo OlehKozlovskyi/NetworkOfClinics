@@ -5,6 +5,7 @@ using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
 using NetworkOfPrivateClinics.WorkingWithFiles;
 using Newtonsoft.Json;
+using System.Globalization;
 using System.Net.Http.Headers;
 using System.Text.Json.Serialization;
 
@@ -14,10 +15,12 @@ namespace NetworkOfPrivateClinics
     {
         private static readonly Data generatedInformation;
         private static readonly ClinicRepository clinicRepository;
-
+        private static readonly List<Clinic> clinics;
+        
         static Program() 
         {
             generatedInformation = new Data();
+            clinics = new List<Clinic>();
             clinicRepository = new ClinicRepository(generatedInformation.Clinics);
         }
 
@@ -32,6 +35,7 @@ namespace NetworkOfPrivateClinics
         {
             Console.WriteLine("<<<<<<<<<<<<<<<<< STARTUP MENU >>>>>>>>>>>>>>>");
             Console.WriteLine("2) Enter directory to source file: ");
+            string path = Console.ReadLine();
         }
 
         public static void CreateMenu()
