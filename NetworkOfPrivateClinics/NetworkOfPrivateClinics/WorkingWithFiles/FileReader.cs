@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    //Refactore it maybe can be removed
+    
     public class FileReader
     {
-        public List<Clinic> Read(string path)
+        public List<Clinic>Read(string path)
         {
-            IFileReader reader = GetFileReader(path);
-            return reader.Read(path);
+            IFileReader reader = GetFileReader(pathToDataSourceFile);
+            return reader.Read(pathToDataSourceFile);
         }
 
         private IFileReader GetFileReader(string path)

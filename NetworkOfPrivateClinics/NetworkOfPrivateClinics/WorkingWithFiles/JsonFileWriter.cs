@@ -7,17 +7,29 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetworkOfPrivateClinics.CustomExceptions;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileWriter : IFileWriter
     {
-        public JsonFileWriter(FullPathCreator fullPathCreator)
+        private string _path;
+
+        public JsonFileWriter(string path)
         {
-            FullPath = fullPathCreator.GetFullPath();
+            FullPath = path;
         }
 
-        public Path FullPath { get; }
+        public string FullPath 
+        {
+            get => _path;
+            private set
+            {
+                if (!Path.HasExtension(value))
+                    throw new InvalidDirectoryException(value);
+                _path = value;
+            }
+        }
 
         public void Write(List<Clinic> clinicsList)
         {
