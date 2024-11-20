@@ -10,17 +10,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using NetworkOfPrivateClinics.CustomExceptions;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class CsvFileWriter : IFileWriter
     {
-        public CsvFileWriter(FullPathCreator fullPathCreator)
+        private string _path;
+
+        public CsvFileWriter(string path)
         {
-            FullPath = fullPathCreator.GetFullPath();
+            FullPath = path;
         }
 
-        public string FullPath { get; }
+        public string FullPath
+        {
+            get => _path;
+            private set
+            {
+                if (!Path.HasExtension(value))
+                    throw new InvalidDirectoryException(value);
+                _path = value;
+            }
+        }
 
         public void Write(List<Clinic> clinicsList)
         {
