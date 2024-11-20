@@ -25,8 +25,12 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
         public void Write(List<Clinic> clinicsList)
         {
             using (var sw = new StreamWriter(FullPath))
-            using (var writer = new CsvWriter(sw, CultureInfo.InvariantCulture))
-                writer.WriteRecords(clinicsList);
+            {
+                using (var writer = new CsvWriter(sw, CultureInfo.InvariantCulture))
+                {
+                    writer.WriteRecords(clinicsList);
+                }
+            }
         }
     }
 }

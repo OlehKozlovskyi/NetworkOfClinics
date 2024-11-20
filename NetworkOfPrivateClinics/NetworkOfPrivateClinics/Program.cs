@@ -16,7 +16,6 @@ namespace NetworkOfPrivateClinics
         private static Data generatedInformation;
         private static ClinicRepository clinicRepository;
         private static List<Clinic> clinics;
-        //private static string path = """C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\Oleh.json""";
 
         public Program() 
         {
@@ -71,11 +70,11 @@ namespace NetworkOfPrivateClinics
             try
             {
                 writer.Write(clinics, fileWriter);
-                Console.WriteLine("Data was success written in file");
+                Console.WriteLine("Data was successfully written to the file");
             }
             catch(Exception ex)
             {
-                Console.WriteLine("File didn`t be created, uknown error");
+                Console.WriteLine("File was not created, unknown error");
             }
             
         }
@@ -96,7 +95,7 @@ namespace NetworkOfPrivateClinics
         {
             Console.WriteLine("Enter clinics ID: ");
             int id = Convert.ToInt32(Console.ReadLine());
-            Clinic currentClinic = clinics.Where(x=>x.ClinicID==id).First();
+            Clinic currentClinic = clinics.Where(x=>x.ClinicID==id).Single();
             Console.WriteLine($"Name: {currentClinic.Name}");
             Console.WriteLine($"Location: {currentClinic.Location}");
             foreach (Doctor currentDoctor in currentClinic.Doctors)
