@@ -34,7 +34,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public override void Write(List<Clinic> clinicsList)
+        public override async void Write(List<Clinic> clinicsList)
         {
             using (var sw = new StreamWriter(FullPath))
             {

@@ -19,13 +19,13 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
         public List<Clinic> ReadDefaultSourceFile()
         {
             FileReader reader = new FileReader();
-            return reader.Read(_pathToSourceFile, new JsonFileReader());
+            return reader.Read(_pathToSourceFile, new JsonFileReader()).Result;
         }
 
         public List<Clinic> ReadUsersSourceFile(string path)
         {
             FileReader reader = new FileReader();
-            return reader.Read(path, new JsonFileReader());
+            return reader.Read(path, new JsonFileReader()).Result;
         }
     }
 }

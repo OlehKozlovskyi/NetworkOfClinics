@@ -12,14 +12,14 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileReader : IFileReader
     {
-        public List<Clinic> Read(string path)
+        public async Task<List<Clinic>> Read(string path)
         {
             List<Clinic> items = new();
             try
             {
                 using (StreamReader r = new StreamReader(path))
                 {
-                    string json = r.ReadToEnd();
+                    string json = await r.ReadToEndAsync();
                     items = JsonConvert.DeserializeObject<List<Clinic>>(json);
                 }
             }
@@ -29,7 +29,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
                 Console.WriteLine(ex.Message);
             }
             
-            return items;
+             return items;
         }
     }
 }

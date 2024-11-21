@@ -39,7 +39,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public override void Write(List<Clinic> clinicsList)
+        public override async void Write(List<Clinic> clinicsList)
         {
             using (Stream fileStream = File.Create(FullPath))
             {
