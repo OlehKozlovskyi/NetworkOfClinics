@@ -6,6 +6,8 @@ namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class Clinic
     {
+        public Clinic() { }
+
         public Clinic(int id, string name, string location, List<Doctor> doctors)
         {
             ClinicID = id;

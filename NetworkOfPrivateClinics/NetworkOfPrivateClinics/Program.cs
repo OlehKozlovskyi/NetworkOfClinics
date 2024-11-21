@@ -13,25 +13,18 @@ namespace NetworkOfPrivateClinics
 {
     public class Program
     {
-        private static Data _generatedInformation;
-        private static ClinicRepository _clinicRepository;
-        private static List<Clinic> _clinics;
-        private readonly string _pathToDataSourceFile;
-        private readonly string _nameOfDataSourceFile = "clinics_source.json";
-
-        public Program() 
-        {
-            _generatedInformation = new Data();
-            _clinicRepository = new ClinicRepository(_generatedInformation.Clinics);
-            _clinics = new();
-            _pathToDataSourceFile = Path.GetFullPath(_nameOfDataSourceFile);
-        }
+        private static Data _generatedInformation = new Data();
+        private static ClinicRepository _clinicRepository = new ClinicRepository(_generatedInformation.Clinics);
+        private static List<Clinic> _clinics = new();
+        private readonly string _pathToDataSourceFile = Path.GetFullPath("clinics_source.json");
 
         public static void Main()
         {
-            CreateStartupMenu();
-            Console.Clear();
-            CreateMenu();
+            JsonFileWriter writer = new(@"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json");
+            writer.Write(_generatedInformation.Clinics);
+            //CreateStartupMenu();
+            //Console.Clear();
+            //CreateMenu();
         }
 
         public static void CreateStartupMenu()
@@ -39,7 +32,7 @@ namespace NetworkOfPrivateClinics
             Console.WriteLine("<<<<<<<<<<<<<<<<< STARTUP MENU >>>>>>>>>>>>>>>");
             Console.WriteLine("2) Enter directory to source file: ");
             string path = Console.ReadLine();
-            _clinics = new FileReader().Read(path);
+            //_clinics = new FileReader().Read(path);
         }
 
         public static void CreateMenu()
@@ -53,7 +46,7 @@ namespace NetworkOfPrivateClinics
             ManageOptions(optionsNumber);
         }
 
-        public static IFileWriter GetInformationFromUser()
+        public static void GetInformationFromUser()
         {
             Console.Clear();
             Console.WriteLine("Set directory for saving file: ");
@@ -64,15 +57,13 @@ namespace NetworkOfPrivateClinics
             Console.WriteLine("1) CSV ");
             Console.WriteLine("2) JSON");
             int choice = int.Parse(Console.ReadLine());
-            return TransformUserData(path, name, choice);
         }
 
         public static void WriteDataToFile(IFileWriter fileWriter)
         {
-            DataWriter writer = new();
             try
             {
-                writer.Write(_clinics, fileWriter);
+                fileWriter.Write(_clinics);
                 Console.WriteLine("Data was successfully written to the file");
             }
             catch(Exception ex)
@@ -114,11 +105,11 @@ namespace NetworkOfPrivateClinics
                     break;
                 case 2:
                     GetHospitalWithDoctorsById();
-                        break;
+                    break;
                 case 3:
                     {
-                        var usersValues = GetInformationFromUser();
-                        WriteDataToFile(usersValues);
+                        //var usersValues = GetInformationFromUser();
+                        //WriteDataToFile(usersValues);
                     }
                     break;
                 default:
@@ -126,14 +117,6 @@ namespace NetworkOfPrivateClinics
                     break;
 
             }
-        }
-
-        private static IFileWriter TransformUserData(string path, string name, int choice)
-        {
-            IExtension extension = choice == 1 ? new CsvFormat() : new JsonFormat();
-            var PathCreator = new FullPathCreator(path, name, extension);
-            IFileWriter writer = choice == 1 ? new CsvFileWriter(PathCreator) : new JsonFileWriter(PathCreator);
-            return writer;
         }
     }
 }

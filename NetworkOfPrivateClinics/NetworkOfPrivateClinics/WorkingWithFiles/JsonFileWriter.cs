@@ -1,6 +1,5 @@
 ﻿using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -8,16 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NetworkOfPrivateClinics.CustomExceptions;
+using System.Text.Json;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public class JsonFileWriter : IFileWriter
+    public class JsonFileWriter : BaseWriter
     {
         private string _path;
+        private JsonSerializerOptions _options;
 
         public JsonFileWriter(string path)
         {
             FullPath = path;
+            _options = new JsonSerializerOptions()
+            {
+                IncludeFields = true,
+                PropertyNameCaseInsensitive = true,
+                WriteIndented = true,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            };
         }
 
         public string FullPath 
@@ -31,15 +39,11 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public void Write(List<Clinic> clinicsList)
+        public override void Write(List<Clinic> clinicsList)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            using (StreamWriter sw = new StreamWriter(FullPath))
+            using (Stream fileStream = File.Create(FullPath))
             {
-                using (JsonWriter writer = new JsonTextWriter(sw))
-                {
-                    serializer.Serialize(writer, clinicsList);
-                }
+                JsonSerializer.Serialize<List<Clinic>>(fileStream, value: clinicsList, _options);
             }
             
         }

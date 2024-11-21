@@ -14,7 +14,7 @@ using NetworkOfPrivateClinics.CustomExceptions;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public class CsvFileWriter : IFileWriter
+    public class CsvFileWriter : BaseWriter
     {
         private string _path;
 
@@ -34,7 +34,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public void Write(List<Clinic> clinicsList)
+        public override void Write(List<Clinic> clinicsList)
         {
             using (var sw = new StreamWriter(FullPath))
             {
