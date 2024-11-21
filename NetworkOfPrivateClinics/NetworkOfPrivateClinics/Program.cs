@@ -16,7 +16,6 @@ namespace NetworkOfPrivateClinics
         private static Data _generatedInformation = new Data();
         private static ClinicRepository _clinicRepository = new ClinicRepository(_generatedInformation.Clinics);
         private static List<Clinic> _clinics = new();
-        private readonly string _pathToDataSourceFile = Path.GetFullPath("clinics_source.json");
 
         public static void Main()
         {
@@ -25,14 +24,6 @@ namespace NetworkOfPrivateClinics
             //CreateStartupMenu();
             //Console.Clear();
             //CreateMenu();
-        }
-
-        public static void CreateStartupMenu()
-        {
-            Console.WriteLine("<<<<<<<<<<<<<<<<< STARTUP MENU >>>>>>>>>>>>>>>");
-            Console.WriteLine("2) Enter directory to source file: ");
-            string path = Console.ReadLine();
-            //_clinics = new FileReader().Read(path);
         }
 
         public static void CreateMenu()
