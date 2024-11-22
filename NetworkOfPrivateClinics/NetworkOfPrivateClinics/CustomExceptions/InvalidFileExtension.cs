@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace NetworkOfPrivateClinics.CustomExceptions
 {
-    public class UnsupportedFileException:Exception
+    public class InvalidFileExtension:Exception
     {
-        public UnsupportedFileException(string file)
-            :base(string.Format($"Invalid file extension: {file}")){ }
+        public InvalidFileExtension(string file)
+            :base(string.Format($"Invalid file extension: {file}")) { }
     }
 }

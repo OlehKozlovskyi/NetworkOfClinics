@@ -43,7 +43,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
         {
             using (Stream fileStream = File.Create(FullPath))
             {
-                JsonSerializer.Serialize<List<Clinic>>(fileStream, value: clinicsList, _options);
+                JsonSerializer.Serialize(fileStream, value: clinicsList, _options);
             }
             
         }

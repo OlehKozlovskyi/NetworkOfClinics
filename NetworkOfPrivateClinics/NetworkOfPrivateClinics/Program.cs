@@ -5,6 +5,7 @@ using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
 using NetworkOfPrivateClinics.WorkingWithFiles;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Net.Http.Headers;
 using System.Text.Json.Serialization;
@@ -26,15 +27,23 @@ namespace NetworkOfPrivateClinics
             //CreateMenu();
         }
 
-        public static void CreateMenu()
+        public static void CreateDataReadingMenu()
         {
-            Console.WriteLine(">>>>>>>>>>>> MENU <<<<<<<<<<<<");
+            Console.WriteLine(">>>>>>>>>>>> DATA READING MENU <<<<<<<<<<<<");
+            Console.WriteLine("1) Read data from default source file");
+            Console.WriteLine("2) Read data from user`s source file");
+            int optionNumber = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public static void CreateMainMenu()
+        {
+            Console.WriteLine(">>>>>>>>>>>> Main MENU <<<<<<<<<<<<");
             Console.WriteLine("1) Get all hospitals");
             Console.WriteLine("2) Get hospital by id");
             Console.WriteLine("3) Write data to file");
             Console.WriteLine("Select option");
             int optionsNumber = Convert.ToInt32(Console.ReadLine());
-            ManageOptions(optionsNumber);
+            MainMenuManageOptions(optionsNumber);
         }
 
         public static void GetInformationFromUser()
@@ -86,8 +95,31 @@ namespace NetworkOfPrivateClinics
             foreach (Doctor currentDoctor in currentClinic.Doctors)
                 Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
         }
+        private static void DataReadingMenuManageOptions(int dataReadingOptionsNumber)
+        {
+            FileReaderRepository fileReader = new();
+            switch(dataReadingOptionsNumber)
+            {
+                case 1:
+                    InitDataContext(fileReader.ReadFromDefaultSourceFile());
+                    break;
+                case 2:
+                    var path = GetFullPathFromUser();
+                    InitDataContext(fileReader.ReadFromUsersSourceFile(path));
+                    break;
+            }
+        }
 
-        private static void ManageOptions(int optionsNumber)
+        private static string GetFullPathFromUser()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter full path to json source file: ");
+            string path = Console.ReadLine();
+            return path;
+        }
+        private static void InitDataContext(List<Clinic> list) => _clinics = list;
+
+        private static void MainMenuManageOptions(int optionsNumber)
         {
             switch (optionsNumber)
             {

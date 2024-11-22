@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetworkOfPrivateClinics.CustomExceptions;
+using System.Net;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
@@ -11,21 +13,27 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
     {
         private string _pathToSourceFile;
 
-        public FileReaderRepository() 
+        public FileReaderRepository(string path) 
         {
-            _pathToSourceFile = Path.GetFullPath("clinics_source.json");
+            PathToSourceFile = path;
         }
-        
-        public List<Clinic> ReadDefaultSourceFile()
+
+        public string PathToSourceFile
+        {
+            get => _pathToSourceFile;
+            set
+            {
+                if (!Path.Exists(value))
+                    throw new InvalidDirectoryException(value);
+                if (Path.GetExtension(value) != ".json")
+                    throw new InvalidFileExtension(Path.GetFileName(value));
+                _pathToSourceFile = value;
+            }
+        }
+        public List<Clinic> ReadFromSourceFile()
         {
             FileReader reader = new FileReader();
             return reader.Read(_pathToSourceFile, new JsonFileReader()).Result;
-        }
-
-        public List<Clinic> ReadUsersSourceFile(string path)
-        {
-            FileReader reader = new FileReader();
-            return reader.Read(path, new JsonFileReader()).Result;
         }
     }
 }
