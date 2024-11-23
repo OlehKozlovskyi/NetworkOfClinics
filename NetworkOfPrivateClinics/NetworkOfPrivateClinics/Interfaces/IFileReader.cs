@@ -9,6 +9,6 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IFileReader
     {
-        public Task<List<Clinic>> Read(string path);
+        public List<Clinic> Read(string path);
     }
 }

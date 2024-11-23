@@ -31,7 +31,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public override async void Write(List<Clinic> clinicsList)
+        public override void Write(List<Clinic> clinicsList)
         {
             string json = JsonConvert.SerializeObject(clinicsList, Formatting.Indented);
             File.WriteAllText(FilePath, json);

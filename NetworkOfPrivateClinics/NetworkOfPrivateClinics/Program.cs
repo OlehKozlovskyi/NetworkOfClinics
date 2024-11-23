@@ -21,9 +21,6 @@ namespace NetworkOfPrivateClinics
 
         public static void Main()
         {
-            //FileWriterFactory writerFactory = new FileWriterFactory();
-            //var writer = writerFactory.GetFileWriter(_defaultPathToSource);
-            //writer.Write(_generatedInformation.Clinics);
             CreateDataReadingMenu();
             CreateMainMenu();
         }
@@ -124,7 +121,7 @@ namespace NetworkOfPrivateClinics
             return path;
         }
 
-        private static async void InitDataContext(FileReaderRepository fileReader) => _clinics = await fileReader.ReadFromSourceFile();
+        private static void InitDataContext(FileReaderRepository fileReader) => _clinics = fileReader.ReadFromSourceFile();
 
         private static void MainMenuManageOptions(int optionsNumber)
         {

@@ -12,7 +12,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileReader : IFileReader
     {
-        public async Task<List<Clinic>> Read(string path)
+        public List<Clinic> Read(string path)
         {
             List<Clinic> items = new();
             try
@@ -23,12 +23,12 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
                     items = (List<Clinic>)serializer.Deserialize(stream, typeof(List<Clinic>));
                 }
             }
-            catch (Exception ex)
+            catch (FileNotFoundException exception)
             {
-                Console.WriteLine("The file could not be read:");
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("The file does not exist at the specified path.");
+                Console.WriteLine(exception.Message);
             }
-             return items;
+            return items;
         }
     }
 }

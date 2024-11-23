@@ -28,10 +28,10 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
                 _pathToSourceFile = value;
             }
         }
-        public async Task<List<Clinic>> ReadFromSourceFile()
+        public List<Clinic> ReadFromSourceFile()
         {
             FileReader reader = new FileReader();
-            return await reader.Read(_pathToSourceFile, new JsonFileReader());
+            return reader.Read(_pathToSourceFile, new JsonFileReader());
         }
     }
 }
