@@ -12,19 +12,6 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileReader : IFileReader
     {
-        //private JsonSerializerOptions _options;
-
-        //public JsonFileReader() 
-        //{
-        //    _options = new JsonSerializerOptions()
-        //    {
-        //        IncludeFields = true,
-        //        PropertyNameCaseInsensitive = true,
-        //        WriteIndented = true,
-        //        PropertyNamingPolicy = new PascalCasePolicy()
-        //    };
-        //}
-
         public async Task<List<Clinic>> Read(string path)
         {
             List<Clinic> items = new();

@@ -1,13 +1,13 @@
 ﻿
 using CsvHelper.Configuration.Attributes;
 using CsvHelper.TypeConversion;
+using Newtonsoft.Json;
 
 namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class Clinic
     {
-        public Clinic() { }
-
+        [JsonConstructor]
         public Clinic(int id, string name, string location, List<Doctor> doctors)
         {
             ClinicID = id;
