@@ -14,21 +14,13 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
     public class JsonFileWriter : BaseWriter
     {
         private string _path;
-        //private JsonSerializerOptions _options;
 
         public JsonFileWriter(string path)
         {
-            FullPath = path;
-            //_options = new JsonSerializerOptions()
-            //{
-            //    IncludeFields = true,
-            //    PropertyNameCaseInsensitive = true,
-            //    WriteIndented = true,
-            //    PropertyNamingPolicy = new PascalCasePolicy(),
-            //};
+            FilePath = path;
         }
 
-        public string FullPath 
+        public string FilePath 
         {
             get => _path;
             private set
@@ -41,15 +33,8 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public override async void Write(List<Clinic> clinicsList)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            using (StreamWriter streamWriter = new StreamWriter(FullPath))
-            {
-                using (JsonWriter writer = new JsonTextWriter(streamWriter))
-                {
-                    serializer.Serialize(writer, clinicsList);
-                }
-            }
-            
+            string json = JsonConvert.SerializeObject(clinicsList, Formatting.Indented);
+            File.WriteAllText(FilePath, json);
         }
     }
 }
