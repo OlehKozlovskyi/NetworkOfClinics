@@ -20,7 +20,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
                 case ".json":
                     return new JsonFileWriter(path);
                 default:
-                    throw new UnsupportedFileException(Path.GetFileName(path));
+                    throw new InvalidFileExtension(Path.GetFileName(path));
             }
         }
     }

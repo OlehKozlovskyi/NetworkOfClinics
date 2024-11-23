@@ -17,14 +17,15 @@ namespace NetworkOfPrivateClinics
         private static Data _generatedInformation = new Data();
         private static ClinicRepository _clinicRepository = new ClinicRepository(_generatedInformation.Clinics);
         private static List<Clinic> _clinics = new();
+        private static string _defaultPathToSource = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json";//Path.GetFullPath("clinics_source.json");
 
         public static void Main()
         {
-            JsonFileWriter writer = new(@"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json");
-            writer.Write(_generatedInformation.Clinics);
-            //CreateStartupMenu();
-            //Console.Clear();
-            //CreateMenu();
+            //FileWriterFactory writerFactory = new FileWriterFactory();
+            //var writer = writerFactory.GetFileWriter(_defaultPathToSource);
+            //writer.Write(_generatedInformation.Clinics);
+            CreateDataReadingMenu();
+            CreateMainMenu();
         }
 
         public static void CreateDataReadingMenu()
@@ -33,6 +34,8 @@ namespace NetworkOfPrivateClinics
             Console.WriteLine("1) Read data from default source file");
             Console.WriteLine("2) Read data from user`s source file");
             int optionNumber = Convert.ToInt32(Console.ReadLine());
+            DataReadingMenuManageOptions(optionNumber);
+            Console.Clear();
         }
 
         public static void CreateMainMenu()
@@ -46,7 +49,7 @@ namespace NetworkOfPrivateClinics
             MainMenuManageOptions(optionsNumber);
         }
 
-        public static void GetInformationFromUser()
+        private static void GetInformationFromUser()
         {
             Console.Clear();
             Console.WriteLine("Set directory for saving file: ");
@@ -66,7 +69,7 @@ namespace NetworkOfPrivateClinics
                 fileWriter.Write(_clinics);
                 Console.WriteLine("Data was successfully written to the file");
             }
-            catch(Exception ex)
+            catch
             {
                 Console.WriteLine("File was not created, unknown error");
             }
@@ -95,17 +98,20 @@ namespace NetworkOfPrivateClinics
             foreach (Doctor currentDoctor in currentClinic.Doctors)
                 Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
         }
+
         private static void DataReadingMenuManageOptions(int dataReadingOptionsNumber)
         {
-            FileReaderRepository fileReader = new();
             switch(dataReadingOptionsNumber)
             {
                 case 1:
-                    InitDataContext(fileReader.ReadFromDefaultSourceFile());
+                    InitDataContext(new FileReaderRepository(_defaultPathToSource));
                     break;
                 case 2:
-                    var path = GetFullPathFromUser();
-                    InitDataContext(fileReader.ReadFromUsersSourceFile(path));
+                    var usersPath = GetFullPathFromUser();
+                    InitDataContext(new FileReaderRepository(usersPath));
+                    break;
+                default:
+                    Console.WriteLine("Can`t find option with such number");
                     break;
             }
         }
@@ -117,7 +123,8 @@ namespace NetworkOfPrivateClinics
             string path = Console.ReadLine();
             return path;
         }
-        private static void InitDataContext(List<Clinic> list) => _clinics = list;
+
+        private static async void InitDataContext(FileReaderRepository fileReader) => _clinics = await fileReader.ReadFromSourceFile();
 
         private static void MainMenuManageOptions(int optionsNumber)
         {

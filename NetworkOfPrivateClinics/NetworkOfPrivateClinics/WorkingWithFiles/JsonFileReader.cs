@@ -12,15 +12,28 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileReader : IFileReader
     {
+        //private JsonSerializerOptions _options;
+
+        //public JsonFileReader() 
+        //{
+        //    _options = new JsonSerializerOptions()
+        //    {
+        //        IncludeFields = true,
+        //        PropertyNameCaseInsensitive = true,
+        //        WriteIndented = true,
+        //        PropertyNamingPolicy = new PascalCasePolicy()
+        //    };
+        //}
+
         public async Task<List<Clinic>> Read(string path)
         {
             List<Clinic> items = new();
             try
             {
-                using (StreamReader r = new StreamReader(path))
+                using (StreamReader stream = File.OpenText(path))
                 {
-                    string json = await r.ReadToEndAsync();
-                    items = JsonConvert.DeserializeObject<List<Clinic>>(json);
+                    JsonSerializer serializer = new JsonSerializer();
+                    items = (List<Clinic>)serializer.Deserialize(stream, typeof(List<Clinic>));
                 }
             }
             catch (Exception ex)
@@ -28,7 +41,6 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(ex.Message);
             }
-            
              return items;
         }
     }

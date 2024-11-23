@@ -7,25 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NetworkOfPrivateClinics.CustomExceptions;
-using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileWriter : BaseWriter
     {
         private string _path;
-        private JsonSerializerOptions _options;
+        //private JsonSerializerOptions _options;
 
         public JsonFileWriter(string path)
         {
             FullPath = path;
-            _options = new JsonSerializerOptions()
-            {
-                IncludeFields = true,
-                PropertyNameCaseInsensitive = true,
-                WriteIndented = true,
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            };
+            //_options = new JsonSerializerOptions()
+            //{
+            //    IncludeFields = true,
+            //    PropertyNameCaseInsensitive = true,
+            //    WriteIndented = true,
+            //    PropertyNamingPolicy = new PascalCasePolicy(),
+            //};
         }
 
         public string FullPath 
@@ -41,9 +41,13 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public override async void Write(List<Clinic> clinicsList)
         {
-            using (Stream fileStream = File.Create(FullPath))
+            JsonSerializer serializer = new JsonSerializer();
+            using (StreamWriter streamWriter = new StreamWriter(FullPath))
             {
-                JsonSerializer.Serialize(fileStream, value: clinicsList, _options);
+                using (JsonWriter writer = new JsonTextWriter(streamWriter))
+                {
+                    serializer.Serialize(writer, clinicsList);
+                }
             }
             
         }

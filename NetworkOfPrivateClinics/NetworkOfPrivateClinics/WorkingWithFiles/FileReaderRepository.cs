@@ -23,17 +23,15 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             get => _pathToSourceFile;
             set
             {
-                if (!Path.Exists(value))
-                    throw new InvalidDirectoryException(value);
                 if (Path.GetExtension(value) != ".json")
                     throw new InvalidFileExtension(Path.GetFileName(value));
                 _pathToSourceFile = value;
             }
         }
-        public List<Clinic> ReadFromSourceFile()
+        public async Task<List<Clinic>> ReadFromSourceFile()
         {
             FileReader reader = new FileReader();
-            return reader.Read(_pathToSourceFile, new JsonFileReader()).Result;
+            return await reader.Read(_pathToSourceFile, new JsonFileReader());
         }
     }
 }
