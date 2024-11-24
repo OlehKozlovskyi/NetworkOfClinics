@@ -14,20 +14,17 @@ namespace NetworkOfPrivateClinics
 {
     public class Program
     {
-        private static Data _generatedInformation = new Data();
-        private static List<Clinic> _clinics = new();
-        private static string _pathToSource = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json";
-        private static string _pathToWrite = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinicsDataInCSV.csv";//Path.GetFullPath("clinics_source.json");
+        private List<Clinic> _clinics = new();
+        private string _pathToSource = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json";
 
-        public static void Main()
+        public void Main()
         {
-            //CreateDataReadingMenu();
-            CsvFileWriter writer = new CsvFileWriter(_pathToWrite);
-            writer.Write(_generatedInformation.Clinics);
-            //CreateMainMenu();
+            var program = new Program();
+            program.CreateDataReadingMenu();
+            program.CreateMainMenu();
         }
 
-        public static void CreateDataReadingMenu()
+        public void CreateDataReadingMenu()
         {
             Console.WriteLine(">>>>>>>>>>>> DATA READING MENU <<<<<<<<<<<<");
             Console.WriteLine("1) Read data from default source file");
@@ -37,7 +34,7 @@ namespace NetworkOfPrivateClinics
             Console.Clear();
         }
 
-        public static void CreateMainMenu()
+        public void CreateMainMenu()
         {
             Console.WriteLine(">>>>>>>>>>>> Main MENU <<<<<<<<<<<<");
             Console.WriteLine("1) Get all hospitals");
@@ -48,20 +45,7 @@ namespace NetworkOfPrivateClinics
             MainMenuManageOptions(optionsNumber);
         }
 
-        private static void GetInformationFromUser()
-        {
-            Console.Clear();
-            Console.WriteLine("Set directory for saving file: ");
-            string path = Console.ReadLine();
-            Console.WriteLine("Set file name: ");
-            string name = Console.ReadLine();
-            Console.WriteLine("Choose one of the available formats: ");
-            Console.WriteLine("1) CSV ");
-            Console.WriteLine("2) JSON");
-            int choice = int.Parse(Console.ReadLine());
-        }
-
-        public static void WriteDataToFile(IFileWriter fileWriter)
+        public void WriteDataToFile(BaseWriter fileWriter)
         {
             try
             {
@@ -75,39 +59,16 @@ namespace NetworkOfPrivateClinics
             
         }
 
-        public static void GetAllHospitalsWithDoctors()
-        {
-            foreach (Clinic currentClinic in _clinics)
-            {
-                Console.WriteLine($"Name: {currentClinic.ClinicsName}");
-                Console.WriteLine($"Location: {currentClinic.Location}");
-                foreach (Doctor currentDoctor in currentClinic.Doctors)
-                    Console.WriteLine($"Doctor: {currentDoctor.DoctorsName} {currentDoctor.DoctorsSurname} - {currentDoctor.Type}");
-                Console.WriteLine();
-            }
-        }
-
-        public static void GetHospitalWithDoctorsById()
-        {
-            Console.WriteLine("Enter clinics ID: ");
-            int id = Convert.ToInt32(Console.ReadLine());
-            Clinic currentClinic = _clinics.Where(x => x.ClinicID == id).Single();
-            Console.WriteLine($"Name: {currentClinic.ClinicsName}");
-            Console.WriteLine($"Location: {currentClinic.Location}");
-            foreach (Doctor currentDoctor in currentClinic.Doctors)
-                Console.WriteLine($"Doctor: {currentDoctor.DoctorsName} {currentDoctor.DoctorsSurname} - {currentDoctor.Type}");
-        }
-
-        private static void DataReadingMenuManageOptions(int dataReadingOptionsNumber)
+        private void DataReadingMenuManageOptions(int dataReadingOptionsNumber)
         {
             switch(dataReadingOptionsNumber)
             {
                 case 1:
-                    InitDataContext(new FileReaderRepository(_pathToSource));
+                    _clinics = new FileReaderRepository(_pathToSource).ReadFromSourceFile();
                     break;
                 case 2:
                     _pathToSource = GetFullPathFromUser();
-                    InitDataContext(new FileReaderRepository(_pathToSource));
+                    _clinics = new FileReaderRepository(_pathToSource).ReadFromSourceFile();
                     break;
                 default:
                     Console.WriteLine("Can`t find option with such number");
@@ -115,7 +76,7 @@ namespace NetworkOfPrivateClinics
             }
         }
 
-        private static string GetFullPathFromUser()
+        private string GetFullPathFromUser()
         {
             Console.Clear();
             Console.WriteLine("Enter full path to json source file: ");
@@ -123,22 +84,23 @@ namespace NetworkOfPrivateClinics
             return path;
         }
 
-        private static void InitDataContext(FileReaderRepository fileReader) => _clinics = fileReader.ReadFromSourceFile();
-
-        private static void MainMenuManageOptions(int optionsNumber)
+        private void MainMenuManageOptions(int optionsNumber)
         {
+            DataProvider dataProvider = new(_clinics);
             switch (optionsNumber)
             {
                 case 1:
-                    GetAllHospitalsWithDoctors();
+                    dataProvider.GetAllHospitalsWithDoctors();
                     break;
                 case 2:
-                    GetHospitalWithDoctorsById();
+                    dataProvider.GetHospitalWithDoctorsById();
                     break;
                 case 3:
                     {
-                        //var usersValues = GetInformationFromUser();
-                        //WriteDataToFile(usersValues);
+                        Console.WriteLine("Enter the full path to the file for saving data:");
+                        string path = Console.ReadLine();
+                        var fileWriter = new FileWriterFactory().GetFileWriter(path);
+                        WriteDataToFile(fileWriter);
                     }
                     break;
                 default:
