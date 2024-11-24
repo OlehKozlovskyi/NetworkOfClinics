@@ -70,11 +70,11 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
                                 DoctorsCostOfAdmission = doctor.CostOfAdmission,
                                 AppointmentsDay = monthAppointment.Key,
                                 AppointmentsTime = appointmentDetail.Key,
-                                PatientID = 0,
-                                PatientName = "null",
-                                PatientSurname = "null",
-                                PatientEmail = "null",
-                                PatientContactNumber = "null"
+                                PatientID = appointmentDetail.Value?.PatientID ?? 0,
+                                PatientName = appointmentDetail.Value?.PatientName ?? "null",
+                                PatientSurname = appointmentDetail.Value?.PatientSurname ?? "null",
+                                PatientEmail = appointmentDetail.Value?.Email ?? "null",
+                                PatientContactNumber = appointmentDetail.Value?.Email ?? "null"
                             }))));
         }
     }

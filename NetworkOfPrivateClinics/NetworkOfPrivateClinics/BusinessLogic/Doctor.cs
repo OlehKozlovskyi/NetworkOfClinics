@@ -1,5 +1,6 @@
 ﻿using CsvHelper.Configuration.Attributes;
 using CsvHelper.TypeConversion;
+using Newtonsoft.Json;
 
 namespace NetworkOfPrivateClinics.BisinessLogic
 {
@@ -16,6 +17,8 @@ namespace NetworkOfPrivateClinics.BisinessLogic
 
     public class Doctor
     {
+
+        [JsonConstructor]
         public Doctor(int id, string name, string surname, DoctorType type, decimal costOfPermissiom, Dictionary<int, DailyRoutine> appointment)
         {
             DoctorID = id;
@@ -26,12 +29,12 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             Appointments = appointment;
         }
 
-        public int DoctorID { get; private set; }
-        public string DoctorsName { get; private set; }
-        public string DoctorsSurname { get; private set; }
-        public DoctorType Type { get; private set; }
-        public decimal CostOfAdmission { get; private set; }
-        public Dictionary<int, DailyRoutine> Appointments { get; private set; }
+        public int DoctorID { get; set; }
+        public string DoctorsName { get; set; }
+        public string DoctorsSurname { get; set; }
+        public DoctorType Type { get; set; }
+        public decimal CostOfAdmission { get; set; }
+        public Dictionary<int, DailyRoutine> Appointments { get; set; }
 
     }
 }

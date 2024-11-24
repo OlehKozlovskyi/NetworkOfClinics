@@ -16,9 +16,9 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             Doctors = doctors;
         }
 
-        public int ClinicID { get; private set; }
-        public string ClinicsName { get; private set; }
-        public string Location { get; private set; }
-        public IReadOnlyList<Doctor> Doctors { get; private set; }
+        public int ClinicID { get; set; }
+        public string ClinicsName { get; set; }
+        public string Location { get; set; }
+        public IReadOnlyList<Doctor> Doctors { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             Dictionary<TimeOnly, Patient> generatedList = new();
             while (currentTime < endWorkingDay)
             {
-                generatedList.Add(currentTime, null);
+                generatedList.Add(currentTime, new Patient());
                 currentTime = currentTime.AddHours(1);
             }
             return generatedList;

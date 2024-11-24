@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using CsvHelper.Configuration.Attributes;
 using NetworkOfPrivateClinics.Exceptions;
+using Newtonsoft.Json;
 
 namespace NetworkOfPrivateClinics.BisinessLogic
 {
@@ -18,13 +19,22 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             ContactNumber = phoneNumber;
         }
 
-        public int PatientID { get; private set; }
-        public string PatientName { get; private set; }
-        public string PatientSurname { get; private set; }
+        public Patient() 
+        {
+            PatientID = 0;
+            PatientName = "null";
+            PatientSurname = "null";
+            Email = "example@gmail.com";
+            ContactNumber = "+380 63 123 4567";
+        }
+
+        public int PatientID { get; set; }
+        public string PatientName { get; set; }
+        public string PatientSurname { get; set; }
         public string Email
         {
             get => _email;
-            private set
+            set
             {
                 string template = @"^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$";
                 if (!Regex.IsMatch(value, template))
@@ -37,7 +47,7 @@ namespace NetworkOfPrivateClinics.BisinessLogic
         public string ContactNumber
         {
             get => _contactNumber;
-            private set
+            set
             {
                 string template = @"(?=.*\+[0-9]{3}\s?[0-9]{2}\s?[0-9]{3}\s?[0-9]{4,5}$)";
                 if (!Regex.IsMatch(value, template))
