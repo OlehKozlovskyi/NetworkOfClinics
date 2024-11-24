@@ -15,14 +15,16 @@ namespace NetworkOfPrivateClinics
     public class Program
     {
         private static Data _generatedInformation = new Data();
-        private static ClinicRepository _clinicRepository = new ClinicRepository(_generatedInformation.Clinics);
         private static List<Clinic> _clinics = new();
-        private static string _defaultPathToSource = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json";//Path.GetFullPath("clinics_source.json");
+        private static string _pathToSource = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json";
+        private static string _pathToWrite = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinicsDataInCSV.csv";//Path.GetFullPath("clinics_source.json");
 
         public static void Main()
         {
-            CreateDataReadingMenu();
-            CreateMainMenu();
+            //CreateDataReadingMenu();
+            CsvFileWriter writer = new CsvFileWriter(_pathToWrite);
+            writer.Write(_generatedInformation.Clinics);
+            //CreateMainMenu();
         }
 
         public static void CreateDataReadingMenu()
@@ -77,10 +79,10 @@ namespace NetworkOfPrivateClinics
         {
             foreach (Clinic currentClinic in _clinics)
             {
-                Console.WriteLine($"Name: {currentClinic.Name}");
+                Console.WriteLine($"Name: {currentClinic.ClinicsName}");
                 Console.WriteLine($"Location: {currentClinic.Location}");
                 foreach (Doctor currentDoctor in currentClinic.Doctors)
-                    Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
+                    Console.WriteLine($"Doctor: {currentDoctor.DoctorsName} {currentDoctor.DoctorsSurname} - {currentDoctor.Type}");
                 Console.WriteLine();
             }
         }
@@ -89,11 +91,11 @@ namespace NetworkOfPrivateClinics
         {
             Console.WriteLine("Enter clinics ID: ");
             int id = Convert.ToInt32(Console.ReadLine());
-            Clinic currentClinic = _clinics.Where(x=>x.ClinicID==id).Single();
-            Console.WriteLine($"Name: {currentClinic.Name}");
+            Clinic currentClinic = _clinics.Where(x => x.ClinicID == id).Single();
+            Console.WriteLine($"Name: {currentClinic.ClinicsName}");
             Console.WriteLine($"Location: {currentClinic.Location}");
             foreach (Doctor currentDoctor in currentClinic.Doctors)
-                Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
+                Console.WriteLine($"Doctor: {currentDoctor.DoctorsName} {currentDoctor.DoctorsSurname} - {currentDoctor.Type}");
         }
 
         private static void DataReadingMenuManageOptions(int dataReadingOptionsNumber)
@@ -101,11 +103,11 @@ namespace NetworkOfPrivateClinics
             switch(dataReadingOptionsNumber)
             {
                 case 1:
-                    InitDataContext(new FileReaderRepository(_defaultPathToSource));
+                    InitDataContext(new FileReaderRepository(_pathToSource));
                     break;
                 case 2:
-                    var usersPath = GetFullPathFromUser();
-                    InitDataContext(new FileReaderRepository(usersPath));
+                    _pathToSource = GetFullPathFromUser();
+                    InitDataContext(new FileReaderRepository(_pathToSource));
                     break;
                 default:
                     Console.WriteLine("Can`t find option with such number");

@@ -2,6 +2,7 @@
 using NetworkOfPrivateClinics.Interfaces;
 using Newtonsoft.Json;
 using CsvHelper;
+using CsvHelper.Configuration;
 using System.Globalization;
 using System.IO;
 using System;
@@ -40,9 +41,41 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             {
                 using (var writer = new CsvWriter(sw, CultureInfo.InvariantCulture))
                 {
-                    writer.WriteRecords(clinicsList);
+                    writer.WriteHeader<ExpandedClinic>();
+                    writer.NextRecord();
+                    foreach(var clinic in ClinicsConverter(clinicsList))
+                    {
+                        writer.WriteRecord(clinic);
+                        writer.NextRecord();
+                    }
                 }
             }
+        }
+        
+        private IEnumerable<ExpandedClinic> ClinicsConverter(List<Clinic> clinicsList)
+        {
+            return clinicsList.SelectMany(clinic =>
+                clinic.Doctors.SelectMany(doctor =>
+                    doctor.Appointments.SelectMany(monthAppointment =>
+                        monthAppointment.Value.ListOfDailyAppointments.Select(appointmentDetail =>
+                            new ExpandedClinic()
+                            {
+                                ClinicID = clinic.ClinicID,
+                                ClinicName = clinic.ClinicsName,
+                                ClinicLocation = clinic.Location,
+                                DoctorID = doctor.DoctorID,
+                                DoctorsName = doctor.DoctorsName,
+                                DoctorsSurname = doctor.DoctorsSurname,
+                                DoctorsType = doctor.Type.ToString(),
+                                DoctorsCostOfAdmission = doctor.CostOfAdmission,
+                                AppointmentsDay = monthAppointment.Key,
+                                AppointmentsTime = appointmentDetail.Key,
+                                PatientID = 0,
+                                PatientName = "null",
+                                PatientSurname = "null",
+                                PatientEmail = "null",
+                                PatientContactNumber = "null"
+                            }))));
         }
     }
 }

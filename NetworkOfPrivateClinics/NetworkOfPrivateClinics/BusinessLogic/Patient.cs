@@ -12,15 +12,15 @@ namespace NetworkOfPrivateClinics.BisinessLogic
         public Patient(int id, string name, string surname, string email, string phoneNumber)
         {
             PatientID = id;
-            Name = name;
-            Surname = surname;
+            PatientName = name;
+            PatientSurname = surname;
             Email = email;
             ContactNumber = phoneNumber;
         }
 
         public int PatientID { get; private set; }
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
+        public string PatientName { get; private set; }
+        public string PatientSurname { get; private set; }
         public string Email
         {
             get => _email;
