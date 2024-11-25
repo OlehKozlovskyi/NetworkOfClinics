@@ -1,11 +1,4 @@
 ﻿using NetworkOfPrivateClinics.BisinessLogic;
-using NetworkOfPrivateClinics.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NetworkOfPrivateClinics.CustomExceptions;
 using Newtonsoft.Json;
 

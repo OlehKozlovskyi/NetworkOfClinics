@@ -1,10 +1,4 @@
 ﻿using NetworkOfPrivateClinics.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NetworkOfPrivateClinics.CustomExceptions;
 using NetworkOfPrivateClinics.BisinessLogic;
 using Newtonsoft.Json;
 
@@ -17,11 +11,9 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             List<Clinic> items = new();
             try
             {
-                using (StreamReader stream = File.OpenText(path))
-                {
-                    JsonSerializer serializer = new JsonSerializer();
-                    items = (List<Clinic>)serializer.Deserialize(stream, typeof(List<Clinic>));
-                }
+                using StreamReader stream = File.OpenText(path);
+                JsonSerializer serializer = new JsonSerializer();
+                items = (List<Clinic>)serializer.Deserialize(stream, typeof(List<Clinic>));
             }
             catch (FileNotFoundException exception)
             {

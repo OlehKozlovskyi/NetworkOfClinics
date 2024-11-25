@@ -1,16 +1,6 @@
 ﻿using NetworkOfPrivateClinics.BisinessLogic;
-using NetworkOfPrivateClinics.Interfaces;
-using Newtonsoft.Json;
 using CsvHelper;
-using CsvHelper.Configuration;
 using System.Globalization;
-using System.IO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 using NetworkOfPrivateClinics.CustomExceptions;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
@@ -37,18 +27,14 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
 
         public override void Write(List<Clinic> clinicsList)
         {
-            using (var sw = new StreamWriter(FullPath))
+            using var sw = new StreamWriter(FullPath);
+            using var writer = new CsvWriter(sw, CultureInfo.InvariantCulture);
+            writer.WriteHeader<ExpandedClinic>();
+            writer.NextRecord();
+            foreach(var clinic in ClinicsConverter(clinicsList))
             {
-                using (var writer = new CsvWriter(sw, CultureInfo.InvariantCulture))
-                {
-                    writer.WriteHeader<ExpandedClinic>();
-                    writer.NextRecord();
-                    foreach(var clinic in ClinicsConverter(clinicsList))
-                    {
-                        writer.WriteRecord(clinic);
-                        writer.NextRecord();
-                    }
-                }
+                writer.WriteRecord(clinic);
+                writer.NextRecord();
             }
         }
         
