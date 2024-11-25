@@ -15,9 +15,10 @@ namespace NetworkOfPrivateClinics
     public class Program
     {
         private List<Clinic> _clinics = new();
-        private string _pathToSource = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json";
+        private static string _fileSourceName = "clinics_source.json";
+        private static string _pathToSource = Path.GetFullPath(_fileSourceName);
 
-        public static void Main()
+        public static void Main(string[] args)
         {
             var program = new Program();
             program.CreateDataReadingMenu();
