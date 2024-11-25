@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkOfPrivateClinics
+namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class DoctorsFactory
     {
@@ -15,7 +15,7 @@ namespace NetworkOfPrivateClinics
         private readonly decimal costOfPermission;
         private readonly Dictionary<int, DailyRoutine> appointments;
 
-        public DoctorsFactory(int id, string name, string surname, DoctorType type, decimal costOfPermission, AppointmentsFactory appointmentsFactory) 
+        public DoctorsFactory(int id, string name, string surname, DoctorType type, decimal costOfPermission, AppointmentsFactory appointmentsFactory)
         {
             this.id = id;
             this.name = name;

@@ -1,0 +1,729 @@
+ClinicID,ClinicName,ClinicLocation,DoctorID,DoctorsName,DoctorsSurname,DoctorsType,DoctorsCostOfAdmission,AppointmentsDay,AppointmentsTime,PatientID,PatientName,PatientSurname,PatientEmail,PatientContactNumber
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1234,Alice,Johnson,Neurologist,100,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1345,Bob,Smith,Gastroenterologist,150,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1245,Charlie,Brown,Cardiology,120,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,08:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+14311554,Central Family Clinic,"123 Main Street, Anytown, CA 12345",1235,David,Lee,Anasthesiologist,180,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2134,Emily,Davis,Neurologist,90,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2234,Frank,Miller,Anasthesiologist,110,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2334,Grace,Wilson,Dermatologist,160,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,09:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,10:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,11:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+23312554,Oak Ridge Medical Center,"456 Oak Ridge Avenue, Oak Ridge, TN 67890",2445,Henry,Moore,Gastroenterologist,130,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,24,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,25,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,26,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,27,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,28,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,29,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3123,Isabella,Taylor,Cardiology,140,30,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,24,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,25,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,26,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,27,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,28,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,29,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3223,Jack,Anderson,Oncologist,170,30,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,24,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,25,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,26,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,27,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,28,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,29,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3344,Kate,Thomas,Anasthesiologist,105,30,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,24,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,25,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,26,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,27,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,28,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,29,19:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,12:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,13:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,14:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,15:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,16:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,17:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,18:00,0,null,null,example@gmail.com,example@gmail.com
+11234567,Pine Valley Wellness Center,"789 Pine Valley Road, Pine Valley, AZ 54321",3356,Mia,Martin,Dermatologist,150,30,19:00,0,null,null,example@gmail.com,example@gmail.com

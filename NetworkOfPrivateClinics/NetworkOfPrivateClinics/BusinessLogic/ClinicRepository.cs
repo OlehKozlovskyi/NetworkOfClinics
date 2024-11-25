@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkOfPrivateClinics
+namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class ClinicRepository : IClinicRepository
     {
         private readonly List<Clinic> _context;
 
-        public ClinicRepository(List<Clinic> clinicContext) 
+        public ClinicRepository(List<Clinic> clinicContext)
         {
             _context = clinicContext;
         }

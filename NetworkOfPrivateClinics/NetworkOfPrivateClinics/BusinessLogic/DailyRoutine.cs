@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CsvHelper.Configuration.Attributes;
+using CsvHelper.TypeConversion;
 
-namespace NetworkOfPrivateClinics
+namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class DailyRoutine
     {
@@ -33,7 +29,7 @@ namespace NetworkOfPrivateClinics
             Dictionary<TimeOnly, Patient> generatedList = new();
             while (currentTime < endWorkingDay)
             {
-                generatedList.Add(currentTime, null);
+                generatedList.Add(currentTime, new Patient());
                 currentTime = currentTime.AddHours(1);
             }
             return generatedList;

@@ -1,63 +1,109 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using NetworkOfPrivateClinics;
+using CsvHelper;
+using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.Interfaces;
+using NetworkOfPrivateClinics.WorkingWithFiles;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Net.Http.Headers;
+using System.Text.Json.Serialization;
 
 namespace NetworkOfPrivateClinics
 {
-    public static class Program
+    public class Program
     {
-        private static readonly Data generatedInformation;
-        private static readonly ClinicRepository clinicRepository;
+        private List<Clinic> _clinics = new();
+        private static string _fileSourceName = "clinics_source.json";
+        private static string _pathToSource = Path.GetFullPath(_fileSourceName);
 
-        static Program() 
+        public static void Main(string[] args)
         {
-            generatedInformation = new Data();
-            clinicRepository = new ClinicRepository(generatedInformation.Clinics);
+            var program = new Program();
+            program.CreateDataReadingMenu();
+            program.CreateMainMenu();
         }
 
-        public static void Main()
+        public void CreateDataReadingMenu()
         {
-            Console.WriteLine(">>>>>>>>>>>> MENU <<<<<<<<<<<<".PadLeft(30));
-            Console.WriteLine("1) Get all hospitals".PadLeft(20));
-            Console.WriteLine("2) Get hospital by id".PadLeft(20));
+            Console.WriteLine(">>>>>>>>>>>> DATA READING MENU <<<<<<<<<<<<");
+            Console.WriteLine("1) Read data from default source file");
+            Console.WriteLine("2) Read data from user`s source file");
+            int optionNumber = Convert.ToInt32(Console.ReadLine());
+            DataReadingMenuManageOptions(optionNumber);
+            Console.Clear();
+        }
+
+        public void CreateMainMenu()
+        {
+            Console.WriteLine(">>>>>>>>>>>> Main MENU <<<<<<<<<<<<");
+            Console.WriteLine("1) Get all hospitals");
+            Console.WriteLine("2) Get hospital by id");
+            Console.WriteLine("3) Write data to file");
             Console.WriteLine("Select option");
             int optionsNumber = Convert.ToInt32(Console.ReadLine());
-            ManageOptions(optionsNumber);
+            MainMenuManageOptions(optionsNumber);
         }
 
-        public static void GetAllHospitalsWithDoctors()
+        public void WriteDataToFile(IFileWriter fileWriter)
         {
-            foreach (Clinic currentClinic in clinicRepository.GetClinics())
+            try
             {
-                Console.WriteLine($"Name: {currentClinic.Name}");
-                Console.WriteLine($"Location: {currentClinic.Location}");
-                foreach (Doctor currentDoctor in currentClinic.Doctors)
-                    Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
-                Console.WriteLine();
+                fileWriter.Write(_clinics);
+                Console.WriteLine("Data was successfully written to the file");
+            }
+            catch
+            {
+                Console.WriteLine("File was not created, unknown error");
+            }
+            
+        }
+
+        private void DataReadingMenuManageOptions(int dataReadingOptionsNumber)
+        {
+            switch(dataReadingOptionsNumber)
+            {
+                case 1:
+                    _clinics = new FileReaderRepository(_pathToSource).ReadFromSourceFile();
+                    break;
+                case 2:
+                    _pathToSource = GetFullPathFromUser();
+                    _clinics = new FileReaderRepository(_pathToSource).ReadFromSourceFile();
+                    break;
+                default:
+                    Console.WriteLine("Can`t find option with such number");
+                    break;
             }
         }
 
-        public static void GetHospitalWithDoctorsById()
+        private string GetFullPathFromUser()
         {
-            Console.WriteLine("Enter clinics ID: ");
-            int id = Convert.ToInt32(Console.ReadLine());
-            Clinic currentClinic = clinicRepository.GetClinicById(id);
-            Console.WriteLine($"Name: {currentClinic.Name}");
-            Console.WriteLine($"Location: {currentClinic.Location}");
-            foreach (Doctor currentDoctor in currentClinic.Doctors)
-                Console.WriteLine($"Doctor: {currentDoctor.Name} {currentDoctor.Surname} - {currentDoctor.Type}");
+            Console.Clear();
+            Console.WriteLine("Enter full path to json source file: ");
+            string path = Console.ReadLine();
+            return path;
         }
 
-        private static void ManageOptions(int optionsNumber)
+        private void MainMenuManageOptions(int optionsNumber)
         {
+            DataProvider dataProvider = new(_clinics);
             switch (optionsNumber)
             {
                 case 1:
-                    GetAllHospitalsWithDoctors();
+                    dataProvider.GetAllHospitalsWithDoctors();
                     break;
                 case 2:
-                    GetHospitalWithDoctorsById();
-                        break;
+                    dataProvider.GetHospitalWithDoctorsById();
+                    break;
+                case 3:
+                    {
+                        Console.WriteLine("Enter the full path to the file for saving data:");
+                        string path = Console.ReadLine();
+                        var fileWriter = new FileWriterFactory().GetFileWriter(path);
+                        WriteDataToFile(fileWriter);
+                    }
+                    break;
                 default:
                     Console.WriteLine("Can`t find option with such number");
                     break;
