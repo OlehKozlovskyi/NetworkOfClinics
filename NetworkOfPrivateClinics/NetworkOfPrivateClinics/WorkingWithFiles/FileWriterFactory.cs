@@ -1,10 +1,12 @@
-﻿using NetworkOfPrivateClinics.CustomExceptions;
+﻿using CsvHelper;
+using NetworkOfPrivateClinics.CustomExceptions;
+using NetworkOfPrivateClinics.Interfaces;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class FileWriterFactory
     {
-        public BaseWriter GetFileWriter(string path)
+        public IFileWriter GetFileWriter(string path)
         {
             var fileExtension = Path.GetExtension(path);
             switch (fileExtension)

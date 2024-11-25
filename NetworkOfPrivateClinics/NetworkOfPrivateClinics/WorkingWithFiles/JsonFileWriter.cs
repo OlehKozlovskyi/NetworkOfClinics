@@ -1,10 +1,11 @@
 ﻿using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.CustomExceptions;
+using NetworkOfPrivateClinics.Interfaces;
 using Newtonsoft.Json;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public class JsonFileWriter : BaseWriter
+    public class JsonFileWriter :IFileWriter
     {
         private string _path;
 
@@ -24,10 +25,10 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public override void Write(List<Clinic> clinicsList)
+        public void Write(List<Clinic> clinicsList)
         {
-            string json = JsonConvert.SerializeObject(clinicsList, Formatting.Indented);
-            File.WriteAllText(FilePath, json);
+            string jsonData = JsonConvert.SerializeObject(clinicsList, Formatting.Indented);
+            File.WriteAllText(FilePath, jsonData);
         }
     }
 }

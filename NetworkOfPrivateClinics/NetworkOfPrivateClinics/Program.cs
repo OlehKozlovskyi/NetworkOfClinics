@@ -17,7 +17,7 @@ namespace NetworkOfPrivateClinics
         private List<Clinic> _clinics = new();
         private string _pathToSource = @"C:\Users\OlehKozlovskyi\Documents\GitHub\NetworkOfClinics\NetworkOfPrivateClinics\source\clinics_source.json";
 
-        public void Main()
+        public static void Main()
         {
             var program = new Program();
             program.CreateDataReadingMenu();
@@ -45,7 +45,7 @@ namespace NetworkOfPrivateClinics
             MainMenuManageOptions(optionsNumber);
         }
 
-        public void WriteDataToFile(BaseWriter fileWriter)
+        public void WriteDataToFile(IFileWriter fileWriter)
         {
             try
             {

@@ -2,10 +2,11 @@
 using CsvHelper;
 using System.Globalization;
 using NetworkOfPrivateClinics.CustomExceptions;
+using NetworkOfPrivateClinics.Interfaces;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
-    public class CsvFileWriter : BaseWriter
+    public class CsvFileWriter : IFileWriter
     {
         private string _path;
 
@@ -25,7 +26,7 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public override void Write(List<Clinic> clinicsList)
+        public void Write(List<Clinic> clinicsList)
         {
             using var sw = new StreamWriter(FullPath);
             using var writer = new CsvWriter(sw, CultureInfo.InvariantCulture);
