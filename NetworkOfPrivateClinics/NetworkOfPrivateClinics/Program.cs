@@ -60,16 +60,17 @@ namespace NetworkOfPrivateClinics
             
         }
 
-        private void DataReadingMenuManageOptions(int dataReadingOptionsNumber)
+        private async Task DataReadingMenuManageOptions(int dataReadingOptionsNumber)
         {
+            var fileReader = new FileReaderRepository(_pathToSource);
             switch(dataReadingOptionsNumber)
             {
                 case 1:
-                    _clinics = new FileReaderRepository(_pathToSource).ReadFromSourceFile();
+                    _clinics = await fileReader.ReadFromSourceFile();
                     break;
                 case 2:
-                    _pathToSource = GetFullPathFromUser();
-                    _clinics = new FileReaderRepository(_pathToSource).ReadFromSourceFile();
+                    fileReader.ChangeSourcePath(GetFullPathFromUser());
+                    _clinics = await fileReader.ReadFromSourceFile();
                     break;
                 default:
                     Console.WriteLine("Can`t find option with such number");
