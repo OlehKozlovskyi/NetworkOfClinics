@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
 using CsvHelper;
 using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
@@ -18,24 +17,24 @@ namespace NetworkOfPrivateClinics
         private static string _fileSourceName = "clinics_source.json";
         private static string _pathToSource = Path.GetFullPath(_fileSourceName);
 
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var program = new Program();
-            program.CreateDataReadingMenu();
-            program.CreateMainMenu();
+            await program.CreateDataReadingMenu();
+            await program.CreateMainMenu();
         }
 
-        public void CreateDataReadingMenu()
+        public async Task CreateDataReadingMenu()
         {
             Console.WriteLine(">>>>>>>>>>>> DATA READING MENU <<<<<<<<<<<<");
             Console.WriteLine("1) Read data from default source file");
             Console.WriteLine("2) Read data from user`s source file");
             int optionNumber = Convert.ToInt32(Console.ReadLine());
-            DataReadingMenuManageOptions(optionNumber);
+            await DataReadingMenuManageOptions(optionNumber);
             Console.Clear();
         }
 
-        public void CreateMainMenu()
+        public async Task CreateMainMenu()
         {
             Console.WriteLine(">>>>>>>>>>>> Main MENU <<<<<<<<<<<<");
             Console.WriteLine("1) Get all hospitals");
@@ -43,7 +42,7 @@ namespace NetworkOfPrivateClinics
             Console.WriteLine("3) Write data to file");
             Console.WriteLine("Select option");
             int optionsNumber = Convert.ToInt32(Console.ReadLine());
-            MainMenuManageOptions(optionsNumber);
+            await MainMenuManageOptions(optionsNumber);
         }
 
         public async Task WriteDataToFile(IFileWriter fileWriter)
@@ -56,8 +55,7 @@ namespace NetworkOfPrivateClinics
             catch
             {
                 Console.WriteLine("File was not created, unknown error");
-            }
-            
+            }  
         }
 
         private async Task DataReadingMenuManageOptions(int dataReadingOptionsNumber)
@@ -86,7 +84,7 @@ namespace NetworkOfPrivateClinics
             return path;
         }
 
-        private void MainMenuManageOptions(int optionsNumber)
+        private async Task MainMenuManageOptions(int optionsNumber)
         {
             DataProvider dataProvider = new(_clinics);
             switch (optionsNumber)
@@ -102,13 +100,12 @@ namespace NetworkOfPrivateClinics
                         Console.WriteLine("Enter the full path to the file for saving data:");
                         string path = Console.ReadLine();
                         var fileWriter = new FileWriterFactory().GetFileWriter(path);
-                        WriteDataToFile(fileWriter);
+                        await WriteDataToFile(fileWriter);
                     }
                     break;
                 default:
                     Console.WriteLine("Can`t find option with such number");
                     break;
-
             }
         }
     }
