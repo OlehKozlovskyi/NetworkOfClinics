@@ -25,10 +25,10 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public void Write(List<Clinic> clinicsList)
+        public async Task Write(List<Clinic> clinicsList)
         {
             string jsonData = JsonConvert.SerializeObject(clinicsList, Formatting.Indented);
-            File.WriteAllText(FilePath, jsonData);
+            await File.WriteAllTextAsync(FilePath, jsonData);
         }
     }
 }

@@ -46,11 +46,11 @@ namespace NetworkOfPrivateClinics
             MainMenuManageOptions(optionsNumber);
         }
 
-        public void WriteDataToFile(IFileWriter fileWriter)
+        public async Task WriteDataToFile(IFileWriter fileWriter)
         {
             try
             {
-                fileWriter.Write(_clinics);
+                await fileWriter.Write(_clinics);
                 Console.WriteLine("Data was successfully written to the file");
             }
             catch

@@ -3,6 +3,7 @@ using CsvHelper;
 using System.Globalization;
 using NetworkOfPrivateClinics.CustomExceptions;
 using NetworkOfPrivateClinics.Interfaces;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
@@ -26,17 +27,20 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public void Write(List<Clinic> clinicsList)
+        public async Task Write(List<Clinic> clinicsList)
         {
             using var sw = new StreamWriter(FullPath);
             using var writer = new CsvWriter(sw, CultureInfo.InvariantCulture);
             writer.WriteHeader<ExpandedClinic>();
             writer.NextRecord();
-            foreach(var clinic in ClinicsConverter(clinicsList))
-            {
-                writer.WriteRecord(clinic);
-                writer.NextRecord();
-            }
+            IEnumerable<ExpandedClinic> clinicData = ClinicsConverter(clinicsList);
+            await writer.WriteRecordsAsync(clinicData);
+            //foreach(var clinic in ClinicsConverter(clinicsList))
+            //{
+            //    writer.WriteRecord(clinic);
+            //    writer.NextRecord();
+            //}
+
         }
         
         private IEnumerable<ExpandedClinic> ClinicsConverter(List<Clinic> clinicsList)

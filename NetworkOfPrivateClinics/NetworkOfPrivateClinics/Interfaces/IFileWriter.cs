@@ -9,6 +9,6 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IFileWriter
     {
-        public void Write(List<Clinic> clinicsList);
+        public Task Write(List<Clinic> clinicsList);
     }
 }
