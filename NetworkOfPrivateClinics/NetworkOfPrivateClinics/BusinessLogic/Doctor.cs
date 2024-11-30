@@ -1,6 +1,8 @@
 ﻿using CsvHelper.Configuration.Attributes;
 using CsvHelper.TypeConversion;
+using NetworkOfPrivateClinics.CustomExceptions;
 using Newtonsoft.Json;
+using System.Security.Cryptography;
 
 namespace NetworkOfPrivateClinics.BisinessLogic
 {
@@ -35,6 +37,16 @@ namespace NetworkOfPrivateClinics.BisinessLogic
         public DoctorType Type { get; set; }
         public decimal CostOfAdmission { get; set; }
         public Dictionary<int, DailyRoutine> Appointments { get; set; }
+
+        public DailyRoutine this[int numberOfDay]
+        {
+            get
+            {
+                if(!Appointments.ContainsKey(numberOfDay))
+                    throw new InvalidDaysNumberToMakeAppointmentException(numberOfDay.ToString());
+                return Appointments[numberOfDay];
+            }
+        }
 
     }
 }

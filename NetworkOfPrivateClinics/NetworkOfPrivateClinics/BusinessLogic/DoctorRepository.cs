@@ -25,6 +25,37 @@ namespace NetworkOfPrivateClinics.BusinessLogic
             });
         }
 
+        public async Task<IEnumerable<Doctor>> GetAllDoctorsAsync()
+        {
+            return await Task.FromResult(_doctors);
+        }
+
+        public async Task<Doctor> GetByIdAsync(int id)
+        {
+            var result = await Task.FromResult(_doctors.Single(doctor => doctor.DoctorID == id));
+            if (result == null)
+                throw new DoctorNotFoundException();
+            return result;
+        }
+
+        public async Task UpdateAsync(Doctor doctor)
+        {
+            await Task.Run(() =>
+            {
+                lock (_locker)
+                {
+                    var existingDoctor = _doctors.Single(currentDoctor => currentDoctor.DoctorID == doctor.DoctorID);
+                    if (existingDoctor == null)
+                        throw new DoctorNotFoundException();
+                    existingDoctor.DoctorsName = doctor.DoctorsName;
+                    existingDoctor.DoctorsSurname = doctor.DoctorsSurname;
+                    existingDoctor.Type = doctor.Type;
+                    existingDoctor.CostOfAdmission = doctor.CostOfAdmission;
+                    existingDoctor.Appointments = doctor.Appointments;
+                }
+            });
+        }
+
         public async Task DeleteAsync(int id)
         {
             await Task.Run(() =>
@@ -37,27 +68,28 @@ namespace NetworkOfPrivateClinics.BusinessLogic
             });
         }
 
-        public async Task<IEnumerable<Doctor>> GetAllDoctorsAsync()
-        {
-            return await Task.FromResult(_doctors);
-        }
 
-        public async Task<Doctor> GetByIdAsync(int id)
+        public async Task<bool> TryMakeAppointmentAsync(int doctorId, int dayNumber, string hour, Patient patient)
         {
-            var result = await Task.FromResult(_doctors.Single(doctor => doctor.DoctorID == id));
-            if (result == null)
-                throw new DoctorNotFoundException(id);
-            return result;
-        }
-
-        public async Task UpdateAsync(Doctor doctor)
-        {
-            await Task.Run(() =>
+            bool appointmentBook = false;
+            var doctor = GetByIdAsync(doctorId).Result;
+            lock (_locker)
             {
-                var existingDoctor = _doctors.FirstOrDefault(currentDoctor => currentDoctor.DoctorID == doctor.DoctorID);
-                if(existingDoctor == null)
-                    throw new DoctorNotFoundException()
-            })
+                TimeOnly time = hour.ToTimeOnly();
+                if (doctor[dayNumber][time].PatientName == "null")
+                {
+                    doctor[dayNumber][time] = patient;
+                    Console.WriteLine($"Appointment booked with {doctor[dayNumber][time].PatientName} {doctor[dayNumber][time].PatientSurname} at {time}");
+                    appointmentBook = true;
+                }
+                else
+                {
+                    Console.WriteLine($"Conflict! Time {hour} is already booked by {doctor[dayNumber][time].PatientName} {doctor[dayNumber][time].PatientSurname}");
+                    string shiftedTime = time.AddHours(1).ToString();
+                    appointmentBook = TryMakeAppointmentAsync(doctorId, dayNumber, shiftedTime, patient).Result;
+                }
+            }
+            return await Task.FromResult(appointmentBook);
         }
     }
 }
