@@ -68,29 +68,5 @@ namespace NetworkOfPrivateClinics.BusinessLogic
                 }
             });
         }
-
-
-        public async Task<bool> TryMakeAppointmentAsync(int doctorId, int dayNumber, string hour, Patient patient)
-        {
-            bool appointmentBook = false;
-            var doctor = GetByIdAsync(doctorId).Result;
-            lock (_locker)
-            {
-                TimeOnly time = hour.ToTimeOnly();
-                if (doctor[dayNumber][time].PatientName == "null")
-                {
-                    doctor[dayNumber][time] = patient;
-                    Console.WriteLine($"Appointment booked with {doctor[dayNumber][time].PatientName} {doctor[dayNumber][time].PatientSurname} at {time}");
-                    appointmentBook = true;
-                }
-                else
-                {
-                    Console.WriteLine($"Conflict! Time {hour} is already booked by {doctor[dayNumber][time].PatientName} {doctor[dayNumber][time].PatientSurname}");
-                    string shiftedTime = time.AddHours(1).ToString();
-                    appointmentBook = TryMakeAppointmentAsync(doctorId, dayNumber, shiftedTime, patient).Result;
-                }
-            }
-            return await Task.FromResult(appointmentBook);
-        }
     }
 }

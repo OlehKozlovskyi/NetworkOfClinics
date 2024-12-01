@@ -24,15 +24,5 @@ namespace NetworkOfPrivateClinics.Services
         public async Task RegisterDoctorAsync(Doctor doctor) => await _doctorRepository.AddAsync(doctor);
 
         public async Task<IEnumerable<Doctor>> GetAllDoctorsAsync() => await _doctorRepository.GetAllDoctorsAsync();
-
-        public async Task MakeAppointment(int doctorId, int dayNumber, string hour, Patient patient)
-        {
-            bool isCompleted = await _doctorRepository.TryMakeAppointmentAsync(doctorId, dayNumber, hour, patient);
-            if (isCompleted)
-                await Console.Out.WriteLineAsync("Your appointment has been successfully created");
-            else
-                await Console.Out.WriteLineAsync("Your appointment has been failed");
-
-        }
     }
 }
