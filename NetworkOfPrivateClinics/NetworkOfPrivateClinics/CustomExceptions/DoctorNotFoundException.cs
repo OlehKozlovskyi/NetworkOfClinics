@@ -8,7 +8,7 @@ namespace NetworkOfPrivateClinics.CustomExceptions
 {
     public class DoctorNotFoundException:Exception
     {
-        public DoctorNotFoundException()
-            : base(String.Format($"Doctor with that id doesn`t exist")) { }
+        public DoctorNotFoundException(int id)
+            : base(String.Format($"Doctor with  such id hasn`t been register: {id}")) { }
     }
 }

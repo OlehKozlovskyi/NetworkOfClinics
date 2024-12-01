@@ -32,9 +32,9 @@ namespace NetworkOfPrivateClinics.BusinessLogic
 
         public async Task<Doctor> GetByIdAsync(int id)
         {
-            var result = await Task.FromResult(_doctors.Single(doctor => doctor.DoctorID == id));
+            var result = await Task.FromResult(_doctors.First(doctor => doctor.DoctorID == id));
             if (result == null)
-                throw new DoctorNotFoundException();
+                throw new DoctorNotFoundException(id);
             return result;
         }
 
