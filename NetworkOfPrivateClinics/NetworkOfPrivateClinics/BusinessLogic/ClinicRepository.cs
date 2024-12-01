@@ -13,7 +13,7 @@ namespace NetworkOfPrivateClinics.BisinessLogic
         private readonly List<Clinic> _clinics = new();
         private static readonly object _locker = new object();
 
-        public async Task AddClinic(Clinic clinic)
+        public async Task AddClinicAsync(Clinic clinic)
         {
             await Task.Run(() =>
             {
@@ -25,19 +25,19 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             });
         }
 
-        public async Task DeleteClinic(int id)
+        public async Task DeleteClinicAsync(int id)
         {
             await Task.Run(() =>
             {
                 lock (_locker)
                 {
-                    Clinic existingClinic = GetClinicById(id).Result;
+                    Clinic existingClinic = GetClinicByIdAsync(id).Result;
                     _clinics.Remove(existingClinic);
                 }
             });
         }
 
-        public async Task<Clinic> GetClinicById(int id)
+        public async Task<Clinic> GetClinicByIdAsync(int id)
         {
             Clinic clinic = await Task.FromResult(_clinics.First(x => x.ClinicID == id));
             if (clinic == null)
@@ -45,7 +45,7 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             return clinic;
         }
 
-        public async Task<IEnumerable<Clinic>> GetClinics()
+        public async Task<IEnumerable<Clinic>> GetClinicsAsync()
         {
             return await Task.FromResult(_clinics);
         }
