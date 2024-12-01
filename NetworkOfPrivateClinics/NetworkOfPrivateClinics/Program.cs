@@ -40,6 +40,7 @@ namespace NetworkOfPrivateClinics
             Console.WriteLine("1) Get all hospitals");
             Console.WriteLine("2) Get hospital by id");
             Console.WriteLine("3) Write data to file");
+            Console.WriteLine("4) Run concurrent access simulation");
             Console.WriteLine("Select option");
             int optionsNumber = Convert.ToInt32(Console.ReadLine());
             await MainMenuManageOptions(optionsNumber);
