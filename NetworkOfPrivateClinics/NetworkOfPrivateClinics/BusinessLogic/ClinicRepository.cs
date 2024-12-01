@@ -10,48 +10,44 @@ namespace NetworkOfPrivateClinics.BisinessLogic
 {
     public class ClinicRepository : IClinicRepository
     {
-        private readonly List<Clinic> _context = new();
+        private readonly List<Clinic> _clinics = new();
+        private static readonly object _locker = new object();
 
-        public Task AddClinic(Clinic clinic)
+        public async Task AddClinic(Clinic clinic)
         {
-            throw new NotImplementedException();
+            await Task.Run(() =>
+            {
+                lock (_locker)
+                {
+                    ArgumentNullException.ThrowIfNull(clinic);
+                    _clinics.Add(clinic);
+                }
+            });
         }
 
-        public Task DeleteClinic(int id)
+        public async Task DeleteClinic(int id)
         {
-            throw new NotImplementedException();
+            await Task.Run(() =>
+            {
+                lock (_locker)
+                {
+                    Clinic existingClinic = GetClinicById(id).Result;
+                    _clinics.Remove(existingClinic);
+                }
+            });
         }
 
         public async Task<Clinic> GetClinicById(int id)
         {
-            Clinic clinic = await Task.FromResult(_context.First(x => x.ClinicID == id));
-            if(clinic == null)
-                throw new 
+            Clinic clinic = await Task.FromResult(_clinics.First(x => x.ClinicID == id));
+            if (clinic == null)
+                throw new ClinicNotFoundException(id);
+            return clinic;
         }
 
         public async Task<IEnumerable<Clinic>> GetClinics()
         {
-            return await Task.FromResult(_context);
+            return await Task.FromResult(_clinics);
         }
-
-
-        //public ClinicRepository(List<Clinic> clinicContext)
-        //{
-        //    _context = clinicContext;
-        //}
-
-
-
-        //public void DeleteClinic(int id)
-        //{
-        //    Clinic clinic = _context.First(x => x.ClinicID == id);
-        //    _context.Remove(clinic);
-        //}
-
-        //public Clinic GetClinicById(int id) => _context.First(x => x.ClinicID == id);
-
-        //public IEnumerable<Clinic> GetClinics() => _context;
-
-        //public void AddClinic(Clinic clinic) => _context.Add(clinic);
     }
 }

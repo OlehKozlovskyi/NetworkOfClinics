@@ -20,6 +20,7 @@ namespace NetworkOfPrivateClinics.BusinessLogic
             {
                 lock (_locker)
                 {
+                    ArgumentNullException.ThrowIfNull(doctor);
                     _doctors.Add(doctor);
                 }
             });
@@ -46,7 +47,7 @@ namespace NetworkOfPrivateClinics.BusinessLogic
                 {
                     var existingDoctor = _doctors.Single(currentDoctor => currentDoctor.DoctorID == doctor.DoctorID);
                     if (existingDoctor == null)
-                        throw new DoctorNotFoundException();
+                        throw new DoctorNotFoundException(doctor.DoctorID);
                     existingDoctor.DoctorsName = doctor.DoctorsName;
                     existingDoctor.DoctorsSurname = doctor.DoctorsSurname;
                     existingDoctor.Type = doctor.Type;
