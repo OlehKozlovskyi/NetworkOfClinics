@@ -26,7 +26,7 @@ namespace NetworkOfPrivateClinics.BusinessLogic
             });
         }
 
-        public async Task<IEnumerable<Doctor>> GetAllDoctorsAsync()
+        public async Task<List<Doctor>> GetAllDoctorsAsync()
         {
             return await Task.FromResult(_doctors);
         }

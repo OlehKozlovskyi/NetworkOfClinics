@@ -9,7 +9,7 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IClinicRepository
     {
-        Task<IEnumerable<Clinic>> GetClinicsAsync();
+        Task<List<Clinic>> GetClinicsAsync();
         Task<Clinic> GetClinicByIdAsync(int id);
         Task AddClinicAsync(Clinic clinic);
         Task DeleteClinicAsync(int id);

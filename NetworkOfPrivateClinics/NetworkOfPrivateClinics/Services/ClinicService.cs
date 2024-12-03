@@ -17,12 +17,12 @@ namespace NetworkOfPrivateClinics.Services
             _clinicRepository = repository;
         }
 
-        public async Task AddClinic(Clinic clinic) => await _clinicRepository.AddClinicAsync(clinic);
+        public async Task AddClinicAsync(Clinic clinic) => await _clinicRepository.AddClinicAsync(clinic);
 
-        public async Task<IEnumerable<Clinic>> GetAllClinicsAsync() => await _clinicRepository.GetClinicsAsync();
+        public async Task<List<Clinic>> GetAllClinicsAsync() => await _clinicRepository.GetClinicsAsync();
         
         public async Task<Clinic> GetClinicAsync(int clinicID) => await _clinicRepository.GetClinicByIdAsync(clinicID);
 
-        public async Task RemoveClinic(int clinicID) => await _clinicRepository.DeleteClinicAsync(clinicID);
+        public async Task RemoveClinicAsync(int clinicID) => await _clinicRepository.DeleteClinicAsync(clinicID);
     }
 }

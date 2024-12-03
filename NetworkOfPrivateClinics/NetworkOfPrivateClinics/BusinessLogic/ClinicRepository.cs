@@ -45,7 +45,7 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             return clinic;
         }
 
-        public async Task<IEnumerable<Clinic>> GetClinicsAsync()
+        public async Task<List<Clinic>> GetClinicsAsync()
         {
             return await Task.FromResult(_clinics);
         }

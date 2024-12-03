@@ -23,6 +23,11 @@ namespace NetworkOfPrivateClinics.Services
         
         public async Task RegisterDoctorAsync(Doctor doctor) => await _doctorRepository.AddAsync(doctor);
 
-        public async Task<IEnumerable<Doctor>> GetAllDoctorsAsync() => await _doctorRepository.GetAllDoctorsAsync();
+        public async Task<List<Doctor>> GetAllDoctorsAsync() => await _doctorRepository.GetAllDoctorsAsync();
+
+        public async Task<bool> MakeAppointment(Patient patient)
+        {
+            await _doctorRepository.
+        }
     }
 }
