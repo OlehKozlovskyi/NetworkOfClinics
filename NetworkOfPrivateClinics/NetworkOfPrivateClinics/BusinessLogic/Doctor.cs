@@ -20,8 +20,6 @@ namespace NetworkOfPrivateClinics.BisinessLogic
 
     public class Doctor
     {
-        private readonly static object _locker = new();
-
         [JsonConstructor]
         public Doctor(int id, string name, string surname, DoctorType type, decimal costOfPermissiom, Dictionary<int, DailyRoutine> appointment)
         {
@@ -50,24 +48,13 @@ namespace NetworkOfPrivateClinics.BisinessLogic
             }
         }
 
-        public async Task<bool> TryMakeAppointmentAsync(int dayNumber, string hour, Patient patient)
+        public async Task<bool> TryMakeAppointmentAsync(int dayNumber, TimeOnly hour, Patient patient)
         {
             var appointmentBook = false;
-            lock (_locker)
+            if (Appointments[dayNumber][hour].PatientName == "null")
             {
-                TimeOnly time = hour.ToTimeOnly();
-                if (Appointments[dayNumber][time].PatientName == "null")
-                {
-                    Appointments[dayNumber][time] = patient;
-                    Console.WriteLine($"Appointment booked with {patient.PatientName} {patient.PatientSurname} at {time}");
-                    appointmentBook = true;
-                }
-                else
-                {
-                    Console.WriteLine($"Conflict! Time {hour} is already booked by {Appointments[dayNumber][time].PatientName} {Appointments[dayNumber][time].PatientSurname}");
-                    string shiftedTime = time.AddHours(1).ToString();
-                    appointmentBook = TryMakeAppointmentAsync(dayNumber, shiftedTime, patient).Result;
-                }
+                Appointments[dayNumber][hour] = patient;
+                appointmentBook = true;
             }
             return await Task.FromResult(appointmentBook);
         }

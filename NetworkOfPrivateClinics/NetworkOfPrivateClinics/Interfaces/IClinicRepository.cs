@@ -12,6 +12,6 @@ namespace NetworkOfPrivateClinics.Interfaces
         Task<List<Clinic>> GetClinicsAsync();
         Task<Clinic> GetClinicByIdAsync(int id);
         Task AddClinicAsync(Clinic clinic);
-        Task DeleteClinicAsync(int id);
+        Task DeleteClinicAsync(Clinic clinic);
     }
 }

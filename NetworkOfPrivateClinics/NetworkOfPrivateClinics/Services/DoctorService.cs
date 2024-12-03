@@ -52,6 +52,7 @@ namespace NetworkOfPrivateClinics.Services
         }
 
         public async Task<List<Doctor>> GetAllDoctorsAsync() => await _doctorRepository.GetAllDoctorsAsync();
+        
         public async Task DeleteAsync(int id)
         {
             var doctor = await GetDoctorAsync(id);
@@ -69,23 +70,19 @@ namespace NetworkOfPrivateClinics.Services
             try
             {
                 isAppointmentBook = await _doctorRepository.TryMakeAppointmentAsync(dayNumber, time, existingDoctor, patient);
+                if (isAppointmentBook)
+                    Console.WriteLine($"Appointment booked with {patient.PatientName} {patient.PatientSurname} at {time}");
+                else
+                {
+                    Console.WriteLine($"Conflict! Time {hour} is already booked!!!");
+                    var shiftedTime = time.AddHours(1);
+                    await _doctorRepository.TryMakeAppointmentAsync(dayNumber, shiftedTime, existingDoctor, patient);
+                }
             }
             finally
             {
                 semaphore.Release();
             }
-
-            if (isAppointmentBook)
-            {
-                Console.WriteLine($"Appointment booked with {patient.PatientName} {patient.PatientSurname} at {time}");
-            }   
-            else
-            {
-                Console.WriteLine($"Conflict! Time {hour} is already booked!!!");
-                string shiftedTime = time.AddHours(1).ToString();
-                appointmentBook = TryMakeAppointmentAsync(dayNumber, shiftedTime, patient).Result;
-            }
-
         }
     }
 }

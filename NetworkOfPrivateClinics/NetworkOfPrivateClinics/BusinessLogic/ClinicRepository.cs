@@ -11,38 +11,26 @@ namespace NetworkOfPrivateClinics.BisinessLogic
     public class ClinicRepository : IClinicRepository
     {
         private readonly List<Clinic> _clinics = new();
-        private static readonly object _locker = new object();
 
         public async Task AddClinicAsync(Clinic clinic)
         {
             await Task.Run(() =>
             {
-                lock (_locker)
-                {
-                    ArgumentNullException.ThrowIfNull(clinic);
-                    _clinics.Add(clinic);
-                }
+                _clinics.Add(clinic);
             });
         }
 
-        public async Task DeleteClinicAsync(int id)
+        public async Task DeleteClinicAsync(Clinic clinic)
         {
             await Task.Run(() =>
             {
-                lock (_locker)
-                {
-                    Clinic existingClinic = GetClinicByIdAsync(id).Result;
-                    _clinics.Remove(existingClinic);
-                }
+                _clinics.Remove(clinic);
             });
         }
 
         public async Task<Clinic> GetClinicByIdAsync(int id)
         {
-            Clinic clinic = await Task.FromResult(_clinics.First(x => x.ClinicID == id));
-            if (clinic == null)
-                throw new ClinicNotFoundException(id);
-            return clinic;
+            return await Task.FromResult(_clinics.First(x => x.ClinicID == id));
         }
 
         public async Task<List<Clinic>> GetClinicsAsync()
