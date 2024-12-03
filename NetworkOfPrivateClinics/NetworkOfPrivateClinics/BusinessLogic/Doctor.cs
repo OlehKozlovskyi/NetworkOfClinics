@@ -52,7 +52,7 @@ namespace NetworkOfPrivateClinics.BisinessLogic
 
         public async Task<bool> TryMakeAppointmentAsync(int dayNumber, string hour, Patient patient)
         {
-            bool appointmentBook = false;
+            var appointmentBook = false;
             lock (_locker)
             {
                 TimeOnly time = hour.ToTimeOnly();

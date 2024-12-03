@@ -4,6 +4,7 @@ using NetworkOfPrivateClinics.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,17 +13,12 @@ namespace NetworkOfPrivateClinics.BusinessLogic
     public class DoctorRepository : IDoctorRepository
     {
         private readonly List<Doctor> _doctors = new();
-        private static readonly object _locker = new object();
 
         public async Task AddAsync(Doctor doctor)
         {
             await Task.Run(() =>
             {
-                lock (_locker)
-                {
-                    ArgumentNullException.ThrowIfNull(doctor);
-                    _doctors.Add(doctor);
-                }
+                _doctors.Add(doctor);
             });
         }
 
@@ -43,30 +39,22 @@ namespace NetworkOfPrivateClinics.BusinessLogic
         {
             await Task.Run(() =>
             {
-                lock (_locker)
-                {
-                    var existingDoctor = _doctors.Single(currentDoctor => currentDoctor.DoctorID == doctor.DoctorID);
-                    if (existingDoctor == null)
-                        throw new DoctorNotFoundException(doctor.DoctorID);
-                    existingDoctor.DoctorsName = doctor.DoctorsName;
-                    existingDoctor.DoctorsSurname = doctor.DoctorsSurname;
-                    existingDoctor.Type = doctor.Type;
-                    existingDoctor.CostOfAdmission = doctor.CostOfAdmission;
-                    existingDoctor.Appointments = doctor.Appointments;
-                }
+                var existingDoctor = _doctors.Single(currentDoctor => currentDoctor.DoctorID == doctor.DoctorID);
+                if (existingDoctor == null)
+                    throw new DoctorNotFoundException(doctor.DoctorID);
+                existingDoctor.DoctorsName = doctor.DoctorsName;
+                existingDoctor.DoctorsSurname = doctor.DoctorsSurname;
+                existingDoctor.Type = doctor.Type;
+                existingDoctor.CostOfAdmission = doctor.CostOfAdmission;
+                existingDoctor.Appointments = doctor.Appointments;
             });
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task<bool> TryMakeAppointmentAsync(int dayNumber, TimeOnly hour, Doctor doctor, Patient patient)
         {
-            await Task.Run(() =>
-            {
-                lock (_locker)
-                {
-                    var doctor = GetByIdAsync(id).Result;
-                    _doctors.Remove(doctor);
-                }
-            });
+            return await doctor.TryMakeAppointmentAsync(dayNumber, hour, patient);
         }
+
+        public async Task DeleteAsync(Doctor doctor) => await Task.Run(() => _doctors.Remove(doctor));
     }
 }
