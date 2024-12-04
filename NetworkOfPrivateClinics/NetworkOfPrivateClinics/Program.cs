@@ -1,7 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using CsvHelper;
+using Microsoft.Extensions.Logging;
 using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
+using NetworkOfPrivateClinics.Services;
+using NetworkOfPrivateClinics.Simulation;
 using NetworkOfPrivateClinics.WorkingWithFiles;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -104,10 +108,37 @@ namespace NetworkOfPrivateClinics
                         await WriteDataToFile(fileWriter);
                     }
                     break;
+                case 4:
+                    await RunSimulation();
+                    break;
                 default:
                     Console.WriteLine("Can`t find option with such number");
                     break;
             }
+        }
+
+        private async Task RunSimulation()
+        {
+            ProjectLogger<Program> logger = new();
+            DoctorService doctorService = new(new DoctorRepository(), logger);
+            ConcarentAccessSimulation simulation = new(doctorService, logger);
+            List<Task> tasks = new();
+            (Doctor, Patient) data = await GetIncomingDataForSimulation();
+            await doctorService.RegisterDoctorAsync(data.Item1);
+            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
+            await Task.WhenAll(tasks);
+        }
+
+        private async Task<(Doctor, Patient)> GetIncomingDataForSimulation()
+        {
+            Doctor doctor = new DoctorsFactory(1234, "Alice", "Johnson", DoctorType.Neurologist, 100m,
+                        new AppointmentsFactory("8:00", "17:00")).GetDoctor();
+            Patient patient = new(100, "Oleh", "Kozlovjiy", "Oleg@ukr.net", "+380 68 857 7128");
+            return await Task.FromResult((doctor, patient));
         }
     }
 }

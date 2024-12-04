@@ -1,4 +1,5 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using Microsoft.Extensions.Logging;
+using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
 using System;
@@ -13,10 +14,12 @@ namespace NetworkOfPrivateClinics.Services
     public class DoctorService
     {
         private readonly IDoctorRepository _doctorRepository;
+        private readonly ICustomLogger _logger;
 
-        public DoctorService(IDoctorRepository doctorRepository)
+        public DoctorService(IDoctorRepository doctorRepository, ICustomLogger logger)
         {
             _doctorRepository = doctorRepository;
+            _logger = logger;
         }
 
         public async Task RegisterDoctorAsync(Doctor doctor)
@@ -71,10 +74,10 @@ namespace NetworkOfPrivateClinics.Services
             {
                 isAppointmentBook = await _doctorRepository.TryMakeAppointmentAsync(dayNumber, time, existingDoctor, patient);
                 if (isAppointmentBook)
-                    Console.WriteLine($"Appointment booked with {patient.PatientName} {patient.PatientSurname} at {time}");
+                    await _logger.LogInformation($"Appointment booked with {patient.PatientName} {patient.PatientSurname} at {time}");
                 else
                 {
-                    Console.WriteLine($"Conflict! Time {hour} is already booked!!!");
+                    await _logger.LogWarning($"Conflict! Time {hour} is already booked!!!");
                     var shiftedTime = time.AddHours(1);
                     await _doctorRepository.TryMakeAppointmentAsync(dayNumber, shiftedTime, existingDoctor, patient);
                 }

@@ -1,4 +1,5 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using Microsoft.Extensions.Logging;
+using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.Services;
 using Newtonsoft.Json;
@@ -34,19 +35,21 @@ namespace NetworkOfPrivateClinics
         #region Hardcoding data for lists
         private async Task InitClinicServices()
         {
+            for (int i = 0; i < 3; i++)
+                clinicServices[i] = new ClinicService(new ClinicRepository());
             await clinicServices[0].AddClinicAsync(
                 new Clinic(
                     id: 14311554,
                     name: "Central Family Clinic",
                     location: "123 Main Street, Anytown, CA 12345",
                     doctors: await _doctorServices[0].GetAllDoctorsAsync()));
-            await clinicServices[1].AddClinicAsync(
+            await clinicServices[0].AddClinicAsync(
                 new Clinic(
                     id: 23312554,
                     name: "Oak Ridge Medical Center",
                     location: "456 Oak Ridge Avenue, Oak Ridge, TN 67890",
                     doctors: await _doctorServices[1].GetAllDoctorsAsync()));
-            await clinicServices[2].AddClinicAsync(
+            await clinicServices[0].AddClinicAsync(
                 new Clinic(
                     id: 11234567,
                     name: "Pine Valley Wellness Center",
@@ -56,8 +59,9 @@ namespace NetworkOfPrivateClinics
 
         private async Task InitDoctorServices() 
         {
+            ProjectLogger<Doctor> logger = new();
             for(int i = 0; i < 3; i++)
-                _doctorServices[i] = new DoctorService(new DoctorRepository());
+                _doctorServices[i] = new DoctorService(new DoctorRepository(), logger);
 
             await _doctorServices[0].RegisterDoctorAsync(
                 new DoctorsFactory(1234, "Alice", "Johnson", DoctorType.Neurologist, 100m,
