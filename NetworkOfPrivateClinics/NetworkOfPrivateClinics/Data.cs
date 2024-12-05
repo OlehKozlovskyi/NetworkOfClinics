@@ -61,7 +61,7 @@ namespace NetworkOfPrivateClinics
         {
             ProjectLogger<Doctor> logger = new();
             for(int i = 0; i < 3; i++)
-                _doctorServices[i] = new DoctorService(new DoctorRepository(), logger);
+                _doctorServices[i] = new DoctorService(new DoctorRepository(logger));
 
             await _doctorServices[0].RegisterDoctorAsync(
                 new DoctorsFactory(1234, "Alice", "Johnson", DoctorType.Neurologist, 100m,

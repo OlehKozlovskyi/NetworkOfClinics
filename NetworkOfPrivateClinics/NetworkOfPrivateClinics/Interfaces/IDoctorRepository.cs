@@ -14,6 +14,6 @@ namespace NetworkOfPrivateClinics.Interfaces
         Task UpdateAsync(Doctor doctor);
         Task DeleteAsync(Doctor doctor);
         Task<Doctor> GetByIdAsync(int id);
-        Task<bool> TryMakeAppointmentAsync(int dayNumber, TimeOnly hour, Doctor doctor, Patient patient);
+        Task MakeAppointmentAsync(int dayNumber, TimeOnly hour, Doctor doctor, Patient patient);
     }
 }

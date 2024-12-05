@@ -14,26 +14,24 @@ namespace NetworkOfPrivateClinics.Services
     public class DoctorService
     {
         private readonly IDoctorRepository _doctorRepository;
-        private readonly ICustomLogger _logger;
+        private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
 
-        public DoctorService(IDoctorRepository doctorRepository, ICustomLogger logger)
+        public DoctorService(IDoctorRepository doctorRepository)
         {
             _doctorRepository = doctorRepository;
-            _logger = logger;
         }
 
         public async Task RegisterDoctorAsync(Doctor doctor)
         {
             ArgumentNullException.ThrowIfNull(doctor);
-            SemaphoreSlim semaphoreSlim = new SemaphoreSlim(1,5);
-            await semaphoreSlim.WaitAsync();
+            await semaphore.WaitAsync();
             try
             {
                 await _doctorRepository.AddAsync(doctor);
             }
             finally
             {
-                semaphoreSlim.Release();
+                semaphore.Release();
             }
         }
 
@@ -42,7 +40,6 @@ namespace NetworkOfPrivateClinics.Services
         public async Task UpdateAsync(Doctor doctor)
         {
             ArgumentNullException.ThrowIfNull(doctor);
-            SemaphoreSlim semaphore = new SemaphoreSlim(1);
             await semaphore.WaitAsync();
             try
             {
@@ -62,25 +59,15 @@ namespace NetworkOfPrivateClinics.Services
             await _doctorRepository.DeleteAsync(doctor);
         }
 
-        public async Task MakeAppointment(int dayNumber, string hour, int doctorID, Patient patient)
+        public async Task MakeAppointmentAsync(int dayNumber, string hour, int doctorID, Patient patient)
         {
             var existingDoctor = await _doctorRepository.GetByIdAsync(doctorID);
             ArgumentNullException.ThrowIfNull(existingDoctor);
-            bool isAppointmentBook = false;
             TimeOnly time = hour.ToTimeOnly();
-            SemaphoreSlim semaphore = new SemaphoreSlim(1);
             await semaphore.WaitAsync();
             try
             {
-                isAppointmentBook = await _doctorRepository.TryMakeAppointmentAsync(dayNumber, time, existingDoctor, patient);
-                if (isAppointmentBook)
-                    await _logger.LogInformation($"Appointment booked with {patient.PatientName} {patient.PatientSurname} at {time}");
-                else
-                {
-                    await _logger.LogWarning($"Conflict! Time {hour} is already booked!!!");
-                    var shiftedTime = time.AddHours(1);
-                    await _doctorRepository.TryMakeAppointmentAsync(dayNumber, shiftedTime, existingDoctor, patient);
-                }
+                await _doctorRepository.MakeAppointmentAsync(dayNumber, time, existingDoctor, patient);  
             }
             finally
             {

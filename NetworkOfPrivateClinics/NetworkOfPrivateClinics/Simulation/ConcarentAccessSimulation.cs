@@ -12,21 +12,19 @@ namespace NetworkOfPrivateClinics.Simulation
     public class ConcarentAccessSimulation
     {
         private readonly DoctorService _doctorService;
-        private readonly ICustomLogger _logger;
 
-        public ConcarentAccessSimulation(DoctorService doctorService, ICustomLogger logger) 
+        public ConcarentAccessSimulation(DoctorService doctorService) 
         {
             _doctorService = doctorService;
-            _logger = logger;
         }
 
         public async Task Run(int day, string hour, int doctor, Patient patient)
         {
-            SemaphoreSlim semaphore = new SemaphoreSlim(5);
+            SemaphoreSlim semaphore = new SemaphoreSlim(1,5);
             await semaphore.WaitAsync();
             try
             {
-                await _doctorService.MakeAppointment(day, hour, doctor, patient);
+                await _doctorService.MakeAppointmentAsync(day, hour, doctor, patient);
             }
             finally
             {

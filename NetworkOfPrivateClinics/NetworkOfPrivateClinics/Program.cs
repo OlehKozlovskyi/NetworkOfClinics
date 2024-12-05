@@ -120,16 +120,16 @@ namespace NetworkOfPrivateClinics
         private async Task RunSimulation()
         {
             ProjectLogger<Program> logger = new();
-            DoctorService doctorService = new(new DoctorRepository(), logger);
-            ConcarentAccessSimulation simulation = new(doctorService, logger);
+            DoctorService doctorService = new(new DoctorRepository(logger));
+            ConcarentAccessSimulation simulation = new(doctorService);
             List<Task> tasks = new();
             (Doctor, Patient) data = await GetIncomingDataForSimulation();
             await doctorService.RegisterDoctorAsync(data.Item1);
-            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "14:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
+            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
             await Task.WhenAll(tasks);
         }
 

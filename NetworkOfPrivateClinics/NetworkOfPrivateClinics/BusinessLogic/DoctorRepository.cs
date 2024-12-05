@@ -1,6 +1,7 @@
 ﻿using NetworkOfPrivateClinics.BisinessLogic;
 using NetworkOfPrivateClinics.CustomExceptions;
 using NetworkOfPrivateClinics.Interfaces;
+using NetworkOfPrivateClinics.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace NetworkOfPrivateClinics.BusinessLogic
     public class DoctorRepository : IDoctorRepository
     {
         private readonly List<Doctor> _doctors = new();
+        private readonly ICustomLogger _logger;
+
+        public DoctorRepository(ICustomLogger logger)
+        {
+            _logger = logger;
+        }
 
         public async Task AddAsync(Doctor doctor)
         {
@@ -50,9 +57,16 @@ namespace NetworkOfPrivateClinics.BusinessLogic
             });
         }
 
-        public async Task<bool> TryMakeAppointmentAsync(int dayNumber, TimeOnly hour, Doctor doctor, Patient patient)
+        public async Task MakeAppointmentAsync(int dayNumber, TimeOnly hour, Doctor doctor, Patient patient)
         {
-            return await doctor.TryMakeAppointmentAsync(dayNumber, hour, patient);
+            var isAppointmentBook = await doctor.TryMakeAppointmentAsync(dayNumber, hour, patient);
+            if (isAppointmentBook)
+                await _logger.LogInformation($"Appointment booked with {patient.PatientName} {patient.PatientSurname} at {hour}");
+            else
+            {
+                var shiftedTime = hour.AddHours(1);
+                await MakeAppointmentAsync(dayNumber, shiftedTime, doctor, patient);
+            }
         }
 
         public async Task DeleteAsync(Doctor doctor) => await Task.Run(() => _doctors.Remove(doctor));
