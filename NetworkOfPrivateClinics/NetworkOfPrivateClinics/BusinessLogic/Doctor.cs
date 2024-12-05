@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using System.Data;
 using System.Security.Cryptography;
 
-namespace NetworkOfPrivateClinics.BisinessLogic
+namespace NetworkOfPrivateClinics.BusinessLogic
 {
     public enum DoctorType
     {

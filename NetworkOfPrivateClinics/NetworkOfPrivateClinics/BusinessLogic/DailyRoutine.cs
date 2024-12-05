@@ -2,7 +2,7 @@
 using CsvHelper.TypeConversion;
 using NetworkOfPrivateClinics.CustomExceptions;
 
-namespace NetworkOfPrivateClinics.BisinessLogic
+namespace NetworkOfPrivateClinics.BusinessLogic
 {
     public class DailyRoutine
     {

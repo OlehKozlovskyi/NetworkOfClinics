@@ -1,4 +1,4 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles

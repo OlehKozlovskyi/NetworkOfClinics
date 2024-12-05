@@ -3,7 +3,7 @@ using CsvHelper.Configuration.Attributes;
 using CsvHelper.TypeConversion;
 using Newtonsoft.Json;
 
-namespace NetworkOfPrivateClinics.BisinessLogic
+namespace NetworkOfPrivateClinics.BusinessLogic
 {
     public class Clinic
     {

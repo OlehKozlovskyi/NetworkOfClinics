@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkOfPrivateClinics.Services
+namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface ICustomLogger
     {

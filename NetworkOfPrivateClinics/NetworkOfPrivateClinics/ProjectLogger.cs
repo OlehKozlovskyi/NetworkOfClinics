@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using NetworkOfPrivateClinics.Interfaces;
 using NetworkOfPrivateClinics.Services;
 using System;
 using System.Collections.Generic;

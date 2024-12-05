@@ -1,4 +1,4 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using NetworkOfPrivateClinics.BusinessLogic;
 using CsvHelper;
 using System.Globalization;
 using NetworkOfPrivateClinics.CustomExceptions;

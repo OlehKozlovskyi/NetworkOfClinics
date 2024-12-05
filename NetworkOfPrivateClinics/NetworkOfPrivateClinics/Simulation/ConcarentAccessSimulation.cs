@@ -1,4 +1,4 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.Services;
 using System;
 using System.Collections.Generic;

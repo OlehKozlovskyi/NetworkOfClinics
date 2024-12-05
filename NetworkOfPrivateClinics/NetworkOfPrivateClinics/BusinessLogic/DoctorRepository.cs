@@ -1,4 +1,4 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.CustomExceptions;
 using NetworkOfPrivateClinics.Interfaces;
 using NetworkOfPrivateClinics.Services;

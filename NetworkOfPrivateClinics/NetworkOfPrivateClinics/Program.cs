@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using CsvHelper;
 using Microsoft.Extensions.Logging;
-using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
 using NetworkOfPrivateClinics.Services;

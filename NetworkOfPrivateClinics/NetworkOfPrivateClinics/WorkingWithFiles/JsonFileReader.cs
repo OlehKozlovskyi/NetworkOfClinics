@@ -1,5 +1,5 @@
 ﻿using NetworkOfPrivateClinics.Interfaces;
-using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.BusinessLogic;
 using Newtonsoft.Json;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
