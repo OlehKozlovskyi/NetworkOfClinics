@@ -48,15 +48,15 @@ namespace NetworkOfPrivateClinics.BusinessLogic
             }
         }
 
-        public async Task<bool> TryMakeAppointmentAsync(int dayNumber, TimeOnly hour, Patient patient)
+        public bool TryMakeAppointmentAsync(int dayNumber, TimeOnly hour, Patient patient)
         {
-            var appointmentBook = false;
+            var appointmentBooked = false;
             if (Appointments[dayNumber][hour].PatientName == "null")
             {
                 Appointments[dayNumber][hour] = patient;
-                appointmentBook = true;
+                appointmentBooked = true;
             }
-            return await Task.FromResult(appointmentBook);
+            return appointmentBooked;
         }
 
     }

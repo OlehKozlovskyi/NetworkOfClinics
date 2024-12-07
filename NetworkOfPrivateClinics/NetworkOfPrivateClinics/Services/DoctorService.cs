@@ -13,64 +13,43 @@ namespace NetworkOfPrivateClinics.Services
     public class DoctorService
     {
         private readonly IDoctorRepository _doctorRepository;
-        private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
+        private static readonly object _lockObject = new object();
 
         public DoctorService(IDoctorRepository doctorRepository)
         {
             _doctorRepository = doctorRepository;
         }
 
-        public async Task RegisterDoctorAsync(Doctor doctor)
+        public void RegisterDoctorAsync(Doctor doctor)
         {
             ArgumentNullException.ThrowIfNull(doctor);
-            await semaphore.WaitAsync();
-            try
-            {
-                await _doctorRepository.AddAsync(doctor);
-            }
-            finally
-            {
-                semaphore.Release();
-            }
+            _doctorRepository.Add(doctor);
         }
 
-        public async Task<Doctor> GetDoctorAsync(int id) => await _doctorRepository.GetByIdAsync(id);
+        public Doctor GetDoctor(int id) => _doctorRepository.GetById(id);
 
-        public async Task UpdateAsync(Doctor doctor)
+        public void UpdateAsync(Doctor doctor)
         {
             ArgumentNullException.ThrowIfNull(doctor);
-            await semaphore.WaitAsync();
-            try
-            {
-                await _doctorRepository.UpdateAsync(doctor);
-            }
-            finally
-            {
-                semaphore.Release();
-            }
+            _doctorRepository.Update(doctor);
         }
 
-        public async Task<List<Doctor>> GetAllDoctorsAsync() => await _doctorRepository.GetAllDoctorsAsync();
+        public List<Doctor> GetAllDoctors() => _doctorRepository.GetAllDoctors();
         
-        public async Task DeleteAsync(int id)
+        public void Delete(int id)
         {
-            var doctor = await GetDoctorAsync(id);
-            await _doctorRepository.DeleteAsync(doctor);
+            var doctor = GetDoctor(id);
+            _doctorRepository.Delete(doctor);
         }
 
         public async Task MakeAppointmentAsync(int dayNumber, string hour, int doctorID, Patient patient)
         {
-            var existingDoctor = await _doctorRepository.GetByIdAsync(doctorID);
-            ArgumentNullException.ThrowIfNull(existingDoctor);
+            var doctor = _doctorRepository.GetById(doctorID);
+            ArgumentNullException.ThrowIfNull(doctor);
             TimeOnly time = hour.ToTimeOnly();
-            await semaphore.WaitAsync();
-            try
+            lock (_lockObject)
             {
-                await _doctorRepository.MakeAppointmentAsync(dayNumber, time, existingDoctor, patient);  
-            }
-            finally
-            {
-                semaphore.Release();
+                _doctorRepository.MakeAppointment(dayNumber,time,doctor,patient);
             }
         }
     }
