@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.BusinessLogic;
 
 namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IClinicRepository
     {
-        IEnumerable<Clinic> GetClinics();
+        List<Clinic> GetClinics();
         Clinic GetClinicById(int id);
-        void InsertClinic(Clinic clinic);
-        void DeleteClinic(int id);
+        void AddClinic(Clinic clinic);
+        void DeleteClinic(Clinic clinic);
     }
 }

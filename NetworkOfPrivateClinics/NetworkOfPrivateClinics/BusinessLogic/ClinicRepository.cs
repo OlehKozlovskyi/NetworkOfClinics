@@ -6,27 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkOfPrivateClinics.BisinessLogic
+namespace NetworkOfPrivateClinics.BusinessLogic
 {
     public class ClinicRepository : IClinicRepository
     {
-        private readonly List<Clinic> _context;
+        private readonly List<Clinic> _clinics = new();
 
-        public ClinicRepository(List<Clinic> clinicContext)
-        {
-            _context = clinicContext;
-        }
+        public void AddClinic(Clinic clinic) => _clinics.Add(clinic);
 
-        public void DeleteClinic(int id)
-        {
-            Clinic clinic = _context.First(x => x.ClinicID == id);
-            _context.Remove(clinic);
-        }
+        public void DeleteClinic(Clinic clinic) => _clinics.Remove(clinic);
 
-        public Clinic GetClinicById(int id) => _context.First(x => x.ClinicID == id);
+        public Clinic GetClinicById(int id) => _clinics.First(x => x.ClinicID == id);
 
-        public IEnumerable<Clinic> GetClinics() => _context;
-
-        public void InsertClinic(Clinic clinic) => _context.Add(clinic);
+        public List<Clinic> GetClinics() => _clinics;
     }
 }

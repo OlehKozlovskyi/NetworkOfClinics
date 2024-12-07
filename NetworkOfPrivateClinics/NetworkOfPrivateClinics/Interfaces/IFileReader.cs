@@ -1,4 +1,4 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using NetworkOfPrivateClinics.BusinessLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IFileReader
     {
-        public List<Clinic> Read(string path);
+        public Task<List<Clinic>> Read(string path);
     }
 }

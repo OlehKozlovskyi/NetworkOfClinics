@@ -3,7 +3,7 @@ using CsvHelper.Configuration.Attributes;
 using NetworkOfPrivateClinics.Exceptions;
 using Newtonsoft.Json;
 
-namespace NetworkOfPrivateClinics.BisinessLogic
+namespace NetworkOfPrivateClinics.BusinessLogic
 {
     public class Patient
     {
