@@ -36,19 +36,19 @@ namespace NetworkOfPrivateClinics
         {
             for (int i = 0; i < 3; i++)
                 clinicServices[i] = new ClinicService(new ClinicRepository());
-            await clinicServices[0].AddClinicAsync(
+            await clinicServices[0].AddClinic(
                 new Clinic(
                     id: 14311554,
                     name: "Central Family Clinic",
                     location: "123 Main Street, Anytown, CA 12345",
                     doctors: await _doctorServices[0].GetAllDoctorsAsync()));
-            await clinicServices[0].AddClinicAsync(
+            await clinicServices[0].AddClinic(
                 new Clinic(
                     id: 23312554,
                     name: "Oak Ridge Medical Center",
                     location: "456 Oak Ridge Avenue, Oak Ridge, TN 67890",
                     doctors: await _doctorServices[1].GetAllDoctorsAsync()));
-            await clinicServices[0].AddClinicAsync(
+            await clinicServices[0].AddClinic(
                 new Clinic(
                     id: 11234567,
                     name: "Pine Valley Wellness Center",

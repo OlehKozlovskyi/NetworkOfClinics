@@ -12,30 +12,12 @@ namespace NetworkOfPrivateClinics.BusinessLogic
     {
         private readonly List<Clinic> _clinics = new();
 
-        public async Task AddClinicAsync(Clinic clinic)
-        {
-            await Task.Run(() =>
-            {
-                _clinics.Add(clinic);
-            });
-        }
+        public void AddClinic(Clinic clinic) => _clinics.Add(clinic);
 
-        public async Task DeleteClinicAsync(Clinic clinic)
-        {
-            await Task.Run(() =>
-            {
-                _clinics.Remove(clinic);
-            });
-        }
+        public void DeleteClinic(Clinic clinic) => _clinics.Remove(clinic);
 
-        public async Task<Clinic> GetClinicByIdAsync(int id)
-        {
-            return await Task.FromResult(_clinics.First(x => x.ClinicID == id));
-        }
+        public Clinic GetClinicById(int id) => _clinics.First(x => x.ClinicID == id);
 
-        public async Task<List<Clinic>> GetClinicsAsync()
-        {
-            return await Task.FromResult(_clinics);
-        }
+        public List<Clinic> GetClinics() => _clinics;
     }
 }

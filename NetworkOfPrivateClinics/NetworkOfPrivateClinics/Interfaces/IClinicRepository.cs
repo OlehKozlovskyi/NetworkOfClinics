@@ -9,9 +9,9 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface IClinicRepository
     {
-        Task<List<Clinic>> GetClinicsAsync();
-        Task<Clinic> GetClinicByIdAsync(int id);
-        Task AddClinicAsync(Clinic clinic);
-        Task DeleteClinicAsync(Clinic clinic);
+        List<Clinic> GetClinics();
+        Clinic GetClinicById(int id);
+        void AddClinic(Clinic clinic);
+        void DeleteClinic(Clinic clinic);
     }
 }

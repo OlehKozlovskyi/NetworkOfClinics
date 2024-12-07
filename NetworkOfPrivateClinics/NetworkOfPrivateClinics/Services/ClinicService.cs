@@ -18,46 +18,26 @@ namespace NetworkOfPrivateClinics.Services
             _clinicRepository = repository;
         }
 
-        public async Task AddClinicAsync(Clinic clinic) 
+        public void AddClinic(Clinic clinic) 
         {
             ArgumentNullException.ThrowIfNull(clinic);
-            SemaphoreSlim semaphore = new SemaphoreSlim(1,5);
-            await semaphore.WaitAsync();
-            try
-            {
-                await _clinicRepository.AddClinicAsync(clinic);
-            }
-            finally
-            {
-                semaphore.Release();
-            }
+            _clinicRepository.AddClinic(clinic);
         }
 
-        public async Task<List<Clinic>> GetAllClinicsAsync() => await _clinicRepository.GetClinicsAsync();
+        public List<Clinic> GetAllClinics() => _clinicRepository.GetClinics();
 
-        public async Task<Clinic> GetClinicAsync(int clinicID) 
+        public Clinic GetClinic(int clinicID) 
         {
-            var clinic = await _clinicRepository.GetClinicByIdAsync(clinicID);
+            var clinic = _clinicRepository.GetClinicById(clinicID);
             if(clinic == null)
-            {
                 throw new ClinicNotFoundException(clinicID);
-            }
             return clinic;
         }
 
-        public async Task RemoveClinicAsync(int clinicID) 
+        public void RemoveClinic(int clinicID) 
         {
-            SemaphoreSlim semaphoreSlim = new SemaphoreSlim(1);
-            Clinic existingClinic = await GetClinicAsync(clinicID);
-            await semaphoreSlim.WaitAsync();
-            try
-            {
-                await _clinicRepository.DeleteClinicAsync(existingClinic);
-            }
-            finally
-            {
-                semaphoreSlim.Release();
-            }
+            Clinic existingClinic = GetClinic(clinicID);
+                _clinicRepository.DeleteClinic(existingClinic);
         }
     }
 }
