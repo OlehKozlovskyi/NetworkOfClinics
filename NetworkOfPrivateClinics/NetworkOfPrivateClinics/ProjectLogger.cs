@@ -11,7 +11,7 @@ namespace NetworkOfPrivateClinics
 {
     public class ProjectLogger<T> : ICustomLogger
     {
-        private static ILogger<T> _logger;
+        private readonly ILogger<T> _logger;
 
         public ProjectLogger()
         {
@@ -23,19 +23,10 @@ namespace NetworkOfPrivateClinics
             _logger = loggerFactory.CreateLogger<T>();
         }
 
-        public async Task LogInformation(string message)
-        {
-            await Task.Run(()=>_logger.LogInformation(message));
-        }
+        public void LogInformation(string message) => _logger.LogInformation(message);
 
-        public async Task LogWarning(string message)
-        {
-            await Task.Run(() => _logger.LogWarning(message));
-        }
+        public void LogWarning(string message) => _logger.LogWarning(message);
 
-        public async Task LogError(string message)
-        {
-            await Task.Run(() => _logger.LogError(message));
-        }
+        public void LogError(string message) => _logger.LogError(message); 
     }
 }

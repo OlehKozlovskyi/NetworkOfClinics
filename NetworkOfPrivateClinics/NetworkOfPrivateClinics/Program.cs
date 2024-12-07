@@ -109,36 +109,15 @@ namespace NetworkOfPrivateClinics
                     }
                     break;
                 case 4:
-                    await RunSimulation();
+                    DoctorRepository doctorRepository = new(new ProjectLogger<Program>());
+                    DoctorService doctorService = new(doctorRepository);
+                    ConcurrentAccessSimulation concurrentSimulation = new(doctorService);
+                    await concurrentSimulation.RunMockConcurrentMakeAppointment();
                     break;
                 default:
                     Console.WriteLine("Can`t find option with such number");
                     break;
             }
-        }
-
-        private async Task RunSimulation()
-        {
-            ProjectLogger<Program> logger = new();
-            DoctorService doctorService = new(new DoctorRepository(logger));
-            ConcarentAccessSimulation simulation = new(doctorService);
-            List<Task> tasks = new();
-            (Doctor, Patient) data = await GetIncomingDataForSimulation();
-            await doctorService.RegisterDoctorAsync(data.Item1);
-            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
-            tasks.Add(Task.Run(() => simulation.Run(6, "10:00", 1234, data.Item2)));
-            await Task.WhenAll(tasks);
-        }
-
-        private async Task<(Doctor, Patient)> GetIncomingDataForSimulation()
-        {
-            Doctor doctor = new DoctorsFactory(1234, "Alice", "Johnson", DoctorType.Neurologist, 100m,
-                        new AppointmentsFactory("8:00", "17:00")).GetDoctor();
-            Patient patient = new(100, "Oleh", "Kozlovjiy", "Oleg@ukr.net", "+380 68 857 7128");
-            return await Task.FromResult((doctor, patient));
         }
     }
 }

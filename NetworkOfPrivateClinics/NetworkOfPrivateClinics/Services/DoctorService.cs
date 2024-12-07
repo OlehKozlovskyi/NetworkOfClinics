@@ -20,7 +20,7 @@ namespace NetworkOfPrivateClinics.Services
             _doctorRepository = doctorRepository;
         }
 
-        public void RegisterDoctorAsync(Doctor doctor)
+        public void RegisterDoctor(Doctor doctor)
         {
             ArgumentNullException.ThrowIfNull(doctor);
             _doctorRepository.Add(doctor);

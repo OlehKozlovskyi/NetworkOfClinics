@@ -8,8 +8,8 @@ namespace NetworkOfPrivateClinics.Interfaces
 {
     public interface ICustomLogger
     {
-        Task LogInformation(string message);
-        Task LogWarning(string message);
-        Task LogError(string message);
+        void LogInformation(string message);
+        void LogWarning(string message);
+        void LogError(string message);
     }
 }
