@@ -1,7 +1,8 @@
 ﻿using CsvHelper.Configuration.Attributes;
 using CsvHelper.TypeConversion;
+using NetworkOfPrivateClinics.CustomExceptions;
 
-namespace NetworkOfPrivateClinics.BisinessLogic
+namespace NetworkOfPrivateClinics.BusinessLogic
 {
     public class DailyRoutine
     {
@@ -19,7 +20,12 @@ namespace NetworkOfPrivateClinics.BisinessLogic
 
         public Patient this[TimeOnly time]
         {
-            get => ListOfDailyAppointments[time];
+            get 
+            {
+                if (!ListOfDailyAppointments.ContainsKey(time))
+                    throw new InvalidHourToMakeAppointmentException(time.ToString());
+                return ListOfDailyAppointments[time];
+            }
             set => ListOfDailyAppointments[time] = value;
         }
 

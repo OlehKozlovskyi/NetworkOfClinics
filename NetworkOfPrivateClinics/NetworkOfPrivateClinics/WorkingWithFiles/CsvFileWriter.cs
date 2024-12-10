@@ -1,4 +1,4 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using NetworkOfPrivateClinics.BusinessLogic;
 using CsvHelper;
 using System.Globalization;
 using NetworkOfPrivateClinics.CustomExceptions;
@@ -26,17 +26,14 @@ namespace NetworkOfPrivateClinics.WorkingWithFiles
             }
         }
 
-        public void Write(List<Clinic> clinicsList)
+        public async Task Write(List<Clinic> clinicsList)
         {
             using var sw = new StreamWriter(FullPath);
             using var writer = new CsvWriter(sw, CultureInfo.InvariantCulture);
             writer.WriteHeader<ExpandedClinic>();
             writer.NextRecord();
-            foreach(var clinic in ClinicsConverter(clinicsList))
-            {
-                writer.WriteRecord(clinic);
-                writer.NextRecord();
-            }
+            List<ExpandedClinic> clinicData = ClinicsConverter(clinicsList).ToList();
+            await writer.WriteRecordsAsync(clinicData);
         }
         
         private IEnumerable<ExpandedClinic> ClinicsConverter(List<Clinic> clinicsList)

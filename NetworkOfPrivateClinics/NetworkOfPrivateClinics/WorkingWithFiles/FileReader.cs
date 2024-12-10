@@ -1,10 +1,10 @@
-﻿using NetworkOfPrivateClinics.BisinessLogic;
+﻿using NetworkOfPrivateClinics.BusinessLogic;
 using NetworkOfPrivateClinics.Interfaces;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class FileReader
     {
-        public List<Clinic> Read(string path, IFileReader reader) => reader.Read(path);
+        public async Task<List<Clinic>> Read(string path, IFileReader reader) => await reader.Read(path);
     }
 }

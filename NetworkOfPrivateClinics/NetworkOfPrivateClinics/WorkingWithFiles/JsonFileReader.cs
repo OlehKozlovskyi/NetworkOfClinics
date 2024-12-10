@@ -1,19 +1,19 @@
 ﻿using NetworkOfPrivateClinics.Interfaces;
-using NetworkOfPrivateClinics.BisinessLogic;
+using NetworkOfPrivateClinics.BusinessLogic;
 using Newtonsoft.Json;
 
 namespace NetworkOfPrivateClinics.WorkingWithFiles
 {
     public class JsonFileReader : IFileReader
     {
-        public List<Clinic> Read(string path)
+        public async Task<List<Clinic>> Read(string path)
         {
             List<Clinic> items = new();
             try
             {
-                using StreamReader stream = File.OpenText(path);
-                JsonSerializer serializer = new JsonSerializer();
-                items = (List<Clinic>)serializer.Deserialize(stream, typeof(List<Clinic>));
+                using StreamReader stream = new StreamReader(path);
+                string jsonData = await stream.ReadToEndAsync();
+                items = JsonConvert.DeserializeObject<List<Clinic>>(jsonData);
             }
             catch (FileNotFoundException exception)
             {
